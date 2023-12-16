@@ -1,0 +1,1407 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://cv'
+paths:
+  /api/v1/certificate/index:
+    get:
+      summary: 'GET Certificate index'
+      operationId: gETCertificateIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 01hhskp6g71sm9v6r6tgg96drs
+                      title: JavaScript
+                      description: 'JavaScript a ES6 - Skillmea'
+                      status: 1
+                      created_at: '2023-12-16T15:25:02.000000Z'
+                      updated_at: '2023-12-16T15:25:02.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskp7eh7bzg0nxam52jepz9
+                      title: PHP
+                      description: 'PHP - Skillmea'
+                      status: 1
+                      created_at: '2023-12-16T15:25:03.000000Z'
+                      updated_at: '2023-12-16T15:25:03.000000Z'
+                      deleted_at: null
+                  links:
+                    first: 'http://cv/api/v1/certificate/index?page=1'
+                    last: 'http://cv/api/v1/certificate/index?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Predchádzajúca'
+                        active: false
+                      -
+                        url: 'http://cv/api/v1/certificate/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Ďalšia &raquo;'
+                        active: false
+                    path: 'http://cv/api/v1/certificate/index'
+                    per_page: 20
+                    to: 2
+                    total: 2
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 01hhskp6g71sm9v6r6tgg96drs
+                        title: JavaScript
+                        description: 'JavaScript a ES6 - Skillmea'
+                        status: 1
+                        created_at: '2023-12-16T15:25:02.000000Z'
+                        updated_at: '2023-12-16T15:25:02.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskp7eh7bzg0nxam52jepz9
+                        title: PHP
+                        description: 'PHP - Skillmea'
+                        status: 1
+                        created_at: '2023-12-16T15:25:03.000000Z'
+                        updated_at: '2023-12-16T15:25:03.000000Z'
+                        deleted_at: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 01hhskp6g71sm9v6r6tgg96drs
+                        title:
+                          type: string
+                          example: JavaScript
+                        description:
+                          type: string
+                          example: 'JavaScript a ES6 - Skillmea'
+                        status:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2023-12-16T15:25:02.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-12-16T15:25:02.000000Z'
+                        deleted_at:
+                          type: string
+                          example: null
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://cv/api/v1/certificate/index?page=1'
+                      last:
+                        type: string
+                        example: 'http://cv/api/v1/certificate/index?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Predchádzajúca'
+                            active: false
+                          -
+                            url: 'http://cv/api/v1/certificate/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Ďalšia &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Predchádzajúca'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://cv/api/v1/certificate/index'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 2
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Certificate
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Pagination page'
+                  example: 1
+                per_page:
+                  type: integer
+                  description: 'Pagination per page'
+                  example: 20
+      security: []
+  '/api/v1/certificate/{slug}':
+    get:
+      summary: 'GET Certificate show'
+      operationId: gETCertificateShow
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 01hhskp6g71sm9v6r6tgg96drs
+                    title: JavaScript
+                    description: 'JavaScript a ES6 - Skillmea'
+                    status: 1
+                    created_at: '2023-12-16T15:25:02.000000Z'
+                    updated_at: '2023-12-16T15:25:02.000000Z'
+                    deleted_at: null
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 01hhskp6g71sm9v6r6tgg96drs
+                      title:
+                        type: string
+                        example: JavaScript
+                      description:
+                        type: string
+                        example: 'JavaScript a ES6 - Skillmea'
+                      status:
+                        type: integer
+                        example: 1
+                      created_at:
+                        type: string
+                        example: '2023-12-16T15:25:02.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-16T15:25:02.000000Z'
+                      deleted_at:
+                        type: string
+                        example: null
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Certificate
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'The slug of the certificate.'
+        example: 01hhskp6g71sm9v6r6tgg96drs
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. ulid required Certificate id'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 01gsa40bvafp2tewxh67bbphw2
+  /api/v1/job/index:
+    get:
+      summary: 'GET Job index'
+      operationId: gETJobIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      title: 'Backend Developer'
+                      description: 'Laravel a Laravel nova'
+                      company: WAME
+                      from: '2021-12-31T23:00:00.000000Z'
+                      to: '2022-12-31T23:00:00.000000Z'
+                    -
+                      title: 'Wordpres programátor'
+                      description: 'Wordpres stránky a Woocomerce eshopy'
+                      company: B-commerce
+                      from: '2021-12-31T23:00:00.000000Z'
+                      to: '2020-12-31T23:00:00.000000Z'
+                  links:
+                    first: 'http://cv/api/v1/job/index?page=1'
+                    last: 'http://cv/api/v1/job/index?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Predchádzajúca'
+                        active: false
+                      -
+                        url: 'http://cv/api/v1/job/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Ďalšia &raquo;'
+                        active: false
+                    path: 'http://cv/api/v1/job/index'
+                    per_page: 20
+                    to: 2
+                    total: 2
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        title: 'Backend Developer'
+                        description: 'Laravel a Laravel nova'
+                        company: WAME
+                        from: '2021-12-31T23:00:00.000000Z'
+                        to: '2022-12-31T23:00:00.000000Z'
+                      -
+                        title: 'Wordpres programátor'
+                        description: 'Wordpres stránky a Woocomerce eshopy'
+                        company: B-commerce
+                        from: '2021-12-31T23:00:00.000000Z'
+                        to: '2020-12-31T23:00:00.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Backend Developer'
+                        description:
+                          type: string
+                          example: 'Laravel a Laravel nova'
+                        company:
+                          type: string
+                          example: WAME
+                        from:
+                          type: string
+                          example: '2021-12-31T23:00:00.000000Z'
+                        to:
+                          type: string
+                          example: '2022-12-31T23:00:00.000000Z'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://cv/api/v1/job/index?page=1'
+                      last:
+                        type: string
+                        example: 'http://cv/api/v1/job/index?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Predchádzajúca'
+                            active: false
+                          -
+                            url: 'http://cv/api/v1/job/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Ďalšia &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Predchádzajúca'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://cv/api/v1/job/index'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 2
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Job
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Pagination page'
+                  example: 1
+                per_page:
+                  type: integer
+                  description: 'Pagination per page'
+                  example: 20
+      security: []
+  '/api/v1/job/{slug}':
+    get:
+      summary: 'GET Job show'
+      operationId: gETJobShow
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 01hhsptjjtf0zcbjt6t05fyggs
+                    title: 'Backend Developer'
+                    company: WAME
+                    description: 'Laravel a Laravel nova'
+                    from: '2021-12-31T23:00:00.000000Z'
+                    to: '2022-12-31T23:00:00.000000Z'
+                    created_at: '2023-12-16T16:19:51.000000Z'
+                    updated_at: '2023-12-16T16:19:51.000000Z'
+                    deleted_at: null
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 01hhsptjjtf0zcbjt6t05fyggs
+                      title:
+                        type: string
+                        example: 'Backend Developer'
+                      company:
+                        type: string
+                        example: WAME
+                      description:
+                        type: string
+                        example: 'Laravel a Laravel nova'
+                      from:
+                        type: string
+                        example: '2021-12-31T23:00:00.000000Z'
+                      to:
+                        type: string
+                        example: '2022-12-31T23:00:00.000000Z'
+                      created_at:
+                        type: string
+                        example: '2023-12-16T16:19:51.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-16T16:19:51.000000Z'
+                      deleted_at:
+                        type: string
+                        example: null
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Job
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'The slug of the job.'
+        example: 01hhsptjjtf0zcbjt6t05fyggs
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. ulid required Job id'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 01gsa40bvafp2tewxh67bbphw2
+  /api/v1/profil/index:
+    get:
+      summary: 'GET Profil index'
+      operationId: gETProfilIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      jobs:
+                        - 'Backend Developer'
+                        - 'Wordpres programátor'
+                      favorite_tools:
+                        - 'Php Storm'
+                        - 'Visual Studio Code'
+                        - 'Git / GitHub'
+                        - 'Heidi SQL'
+                        - 'MAMP / Laragon'
+                        - 'Postman / Insomnia'
+                        - 'Chat GPT'
+                      certificates:
+                        - JavaScript
+                        - PHP
+                      skills:
+                        -
+                          title: JavaScript
+                          description: pokročilý
+                        -
+                          title: PHP
+                          description: pokročilý
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        jobs:
+                          - 'Backend Developer'
+                          - 'Wordpres programátor'
+                        favorite_tools:
+                          - 'Php Storm'
+                          - 'Visual Studio Code'
+                          - 'Git / GitHub'
+                          - 'Heidi SQL'
+                          - 'MAMP / Laragon'
+                          - 'Postman / Insomnia'
+                          - 'Chat GPT'
+                        certificates:
+                          - JavaScript
+                          - PHP
+                        skills:
+                          -
+                            title: JavaScript
+                            description: pokročilý
+                          -
+                            title: PHP
+                            description: pokročilý
+                    items:
+                      type: object
+                      properties:
+                        jobs:
+                          type: array
+                          example:
+                            - 'Backend Developer'
+                            - 'Wordpres programátor'
+                          items:
+                            type: string
+                        favorite_tools:
+                          type: array
+                          example:
+                            - 'Php Storm'
+                            - 'Visual Studio Code'
+                            - 'Git / GitHub'
+                            - 'Heidi SQL'
+                            - 'MAMP / Laragon'
+                            - 'Postman / Insomnia'
+                            - 'Chat GPT'
+                          items:
+                            type: string
+                        certificates:
+                          type: array
+                          example:
+                            - JavaScript
+                            - PHP
+                          items:
+                            type: string
+                        skills:
+                          type: array
+                          example:
+                            -
+                              title: JavaScript
+                              description: pokročilý
+                            -
+                              title: PHP
+                              description: pokročilý
+                          items:
+                            type: object
+                            properties:
+                              title:
+                                type: string
+                                example: JavaScript
+                              description:
+                                type: string
+                                example: pokročilý
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Profil
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Pagination page'
+                  example: 1
+                per_page:
+                  type: integer
+                  description: 'Pagination per page'
+                  example: 20
+      security: []
+  /api/v1/skill/index:
+    get:
+      summary: 'GET Skill index'
+      operationId: gETSkillIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      title: JavaScript
+                      description: pokročilý
+                      progress: 80
+                      status: 1
+                    -
+                      title: PHP
+                      description: pokročilý
+                      progress: 80
+                      status: 1
+                  links:
+                    first: 'http://cv/api/v1/skill/index?page=1'
+                    last: 'http://cv/api/v1/skill/index?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Predchádzajúca'
+                        active: false
+                      -
+                        url: 'http://cv/api/v1/skill/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Ďalšia &raquo;'
+                        active: false
+                    path: 'http://cv/api/v1/skill/index'
+                    per_page: 20
+                    to: 2
+                    total: 2
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        title: JavaScript
+                        description: pokročilý
+                        progress: 80
+                        status: 1
+                      -
+                        title: PHP
+                        description: pokročilý
+                        progress: 80
+                        status: 1
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: JavaScript
+                        description:
+                          type: string
+                          example: pokročilý
+                        progress:
+                          type: integer
+                          example: 80
+                        status:
+                          type: integer
+                          example: 1
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://cv/api/v1/skill/index?page=1'
+                      last:
+                        type: string
+                        example: 'http://cv/api/v1/skill/index?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Predchádzajúca'
+                            active: false
+                          -
+                            url: 'http://cv/api/v1/skill/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Ďalšia &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Predchádzajúca'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://cv/api/v1/skill/index'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 2
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Skill
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Pagination page'
+                  example: 1
+                per_page:
+                  type: integer
+                  description: 'Pagination per page'
+                  example: 20
+      security: []
+  '/api/v1/skill/{slug}':
+    get:
+      summary: 'GET Skill show'
+      operationId: gETSkillShow
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 01hhskp82j73b819zd0bfm68nh
+                    title: JavaScript
+                    description: pokročilý
+                    status: 1
+                    progress: 80
+                    created_at: '2023-12-16T15:25:03.000000Z'
+                    updated_at: '2023-12-16T15:25:03.000000Z'
+                    deleted_at: null
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 01hhskp82j73b819zd0bfm68nh
+                      title:
+                        type: string
+                        example: JavaScript
+                      description:
+                        type: string
+                        example: pokročilý
+                      status:
+                        type: integer
+                        example: 1
+                      progress:
+                        type: integer
+                        example: 80
+                      created_at:
+                        type: string
+                        example: '2023-12-16T15:25:03.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-16T15:25:03.000000Z'
+                      deleted_at:
+                        type: string
+                        example: null
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Skill
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'The slug of the skill.'
+        example: 01hhskp82j73b819zd0bfm68nh
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. ulid required Skill id'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 01gsa40bvafp2tewxh67bbphw2
+  /api/v1/tool/index:
+    get:
+      summary: 'GET Tool index'
+      operationId: gETToolIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 01hhskp83f1r2169gyn0y793hg
+                      title: 'Php Storm'
+                      description: IDE
+                      status: 1
+                      priority: 1
+                      created_at: '2023-12-16T15:25:03.000000Z'
+                      updated_at: '2023-12-16T15:25:03.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskp8eqzgpx29d6n5vhy7hr
+                      title: 'Visual Studio Code'
+                      description: Editor
+                      status: 1
+                      priority: 2
+                      created_at: '2023-12-16T15:25:04.000000Z'
+                      updated_at: '2023-12-16T15:25:04.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskp8qy6ckmvby8b1mrnme0
+                      title: 'Git / GitHub'
+                      description: 'Verzovanie kódu'
+                      status: 1
+                      priority: 3
+                      created_at: '2023-12-16T15:25:04.000000Z'
+                      updated_at: '2023-12-16T15:25:04.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskp9pkvfed03et00wzhtdz
+                      title: 'Heidi SQL'
+                      description: 'Práca s DB'
+                      status: 1
+                      priority: 4
+                      created_at: '2023-12-16T15:25:05.000000Z'
+                      updated_at: '2023-12-16T15:25:05.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskpxnc5c3p81zzana0m908
+                      title: 'MAMP / Laragon'
+                      description: 'Pre prácu na localhoste'
+                      status: 1
+                      priority: 5
+                      created_at: '2023-12-16T15:25:26.000000Z'
+                      updated_at: '2023-12-16T15:25:26.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskpy1teefab48enr48bg5n
+                      title: 'Postman / Insomnia'
+                      description: 'Pre testovanie API'
+                      status: 1
+                      priority: 6
+                      created_at: '2023-12-16T15:25:26.000000Z'
+                      updated_at: '2023-12-16T15:25:26.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhskpyb1h893aqvamkpwtvf6
+                      title: 'Chat GPT'
+                      description: 'Užitočný pomocník pri písaní kódu'
+                      status: 1
+                      priority: 7
+                      created_at: '2023-12-16T15:25:26.000000Z'
+                      updated_at: '2023-12-16T15:25:26.000000Z'
+                      deleted_at: null
+                  links:
+                    first: 'http://cv/api/v1/tool/index?page=1'
+                    last: 'http://cv/api/v1/tool/index?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Predchádzajúca'
+                        active: false
+                      -
+                        url: 'http://cv/api/v1/tool/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Ďalšia &raquo;'
+                        active: false
+                    path: 'http://cv/api/v1/tool/index'
+                    per_page: 20
+                    to: 7
+                    total: 7
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 01hhskp83f1r2169gyn0y793hg
+                        title: 'Php Storm'
+                        description: IDE
+                        status: 1
+                        priority: 1
+                        created_at: '2023-12-16T15:25:03.000000Z'
+                        updated_at: '2023-12-16T15:25:03.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskp8eqzgpx29d6n5vhy7hr
+                        title: 'Visual Studio Code'
+                        description: Editor
+                        status: 1
+                        priority: 2
+                        created_at: '2023-12-16T15:25:04.000000Z'
+                        updated_at: '2023-12-16T15:25:04.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskp8qy6ckmvby8b1mrnme0
+                        title: 'Git / GitHub'
+                        description: 'Verzovanie kódu'
+                        status: 1
+                        priority: 3
+                        created_at: '2023-12-16T15:25:04.000000Z'
+                        updated_at: '2023-12-16T15:25:04.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskp9pkvfed03et00wzhtdz
+                        title: 'Heidi SQL'
+                        description: 'Práca s DB'
+                        status: 1
+                        priority: 4
+                        created_at: '2023-12-16T15:25:05.000000Z'
+                        updated_at: '2023-12-16T15:25:05.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskpxnc5c3p81zzana0m908
+                        title: 'MAMP / Laragon'
+                        description: 'Pre prácu na localhoste'
+                        status: 1
+                        priority: 5
+                        created_at: '2023-12-16T15:25:26.000000Z'
+                        updated_at: '2023-12-16T15:25:26.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskpy1teefab48enr48bg5n
+                        title: 'Postman / Insomnia'
+                        description: 'Pre testovanie API'
+                        status: 1
+                        priority: 6
+                        created_at: '2023-12-16T15:25:26.000000Z'
+                        updated_at: '2023-12-16T15:25:26.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhskpyb1h893aqvamkpwtvf6
+                        title: 'Chat GPT'
+                        description: 'Užitočný pomocník pri písaní kódu'
+                        status: 1
+                        priority: 7
+                        created_at: '2023-12-16T15:25:26.000000Z'
+                        updated_at: '2023-12-16T15:25:26.000000Z'
+                        deleted_at: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 01hhskp83f1r2169gyn0y793hg
+                        title:
+                          type: string
+                          example: 'Php Storm'
+                        description:
+                          type: string
+                          example: IDE
+                        status:
+                          type: integer
+                          example: 1
+                        priority:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2023-12-16T15:25:03.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-12-16T15:25:03.000000Z'
+                        deleted_at:
+                          type: string
+                          example: null
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://cv/api/v1/tool/index?page=1'
+                      last:
+                        type: string
+                        example: 'http://cv/api/v1/tool/index?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Predchádzajúca'
+                            active: false
+                          -
+                            url: 'http://cv/api/v1/tool/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Ďalšia &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Predchádzajúca'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://cv/api/v1/tool/index'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: integer
+                        example: 7
+                      total:
+                        type: integer
+                        example: 7
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Tool
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Pagination page'
+                  example: 1
+                per_page:
+                  type: integer
+                  description: 'Pagination per page'
+                  example: 20
+      security: []
+  '/api/v1/tool/{slug}':
+    get:
+      summary: 'GET Tool show'
+      operationId: gETToolShow
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 01hhskp83f1r2169gyn0y793hg
+                    title: 'Php Storm'
+                    description: IDE
+                    status: 1
+                    priority: 1
+                    created_at: '2023-12-16T15:25:03.000000Z'
+                    updated_at: '2023-12-16T15:25:03.000000Z'
+                    deleted_at: null
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 01hhskp83f1r2169gyn0y793hg
+                      title:
+                        type: string
+                        example: 'Php Storm'
+                      description:
+                        type: string
+                        example: IDE
+                      status:
+                        type: integer
+                        example: 1
+                      priority:
+                        type: integer
+                        example: 1
+                      created_at:
+                        type: string
+                        example: '2023-12-16T15:25:03.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-12-16T15:25:03.000000Z'
+                      deleted_at:
+                        type: string
+                        example: null
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Tool
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'The slug of the tool.'
+        example: 01hhskp83f1r2169gyn0y793hg
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. ulid required Tool id'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 01gsa40bvafp2tewxh67bbphw2
+tags:
+  -
+    name: Certificate
+    description: ''
+  -
+    name: Job
+    description: ''
+  -
+    name: Profil
+    description: ''
+  -
+    name: Skill
+    description: ''
+  -
+    name: Tool
+    description: ''

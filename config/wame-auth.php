@@ -13,7 +13,7 @@ return [
     'login' => [
 
         // Determine if login should be possible.
-        'enabled' => true,
+        'enabled' => false,
 
         // Enable this if only verified users can log in.
         'only_verified' => false,
@@ -28,10 +28,10 @@ return [
     'register' => [
 
         // Determine if registration should be possible.
-        'enabled' => true,
+        'enabled' => false,
 
         // Enable this if verification link should be sent after successful registration.
-        'email_verification' => true,
+        'email_verification' => false,
 
         // Determine rules for password
         'password_rules' => [
@@ -55,7 +55,7 @@ return [
     'email_verification' => [
 
         // Determine if email verification should be enabled.
-        'enabled' => true,
+        'enabled' => false,
 
         // The number of minutes the verification link is valid
         'verification_link_expires_after' => 120,
@@ -66,7 +66,7 @@ return [
     'social' => [
 
         // Determine if social login should be enabled.
-        'enabled' => true,
+        'enabled' => false,
     ],
 
     // Routing Options

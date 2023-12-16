@@ -21,7 +21,7 @@
             <p class="json text-center text-gray-500 font-bold">short_profil: <span class="font-medium">{{this.link() + '/api/v1/profil/index' }}</span></p>
             <p class="json text-center text-gray-500 font-bold">skills: <span>{{this.link() + '/api/v1/skill/index' }}</span></p>
             <p class="json text-center text-gray-500 font-bold">jobs: <span>{{this.link() + '/api/v1/job/index' }}</span></p>
-            <p class="json text-center text-gray-500 font-bold">documentation: <span>{{this.link() + '/scribe' }}</span></p>
+            <p class="json text-center text-gray-500 font-bold">documentation: <span>{{this.link() + '/docs' }}</span></p>
         </a>
     </div>
   </Card>

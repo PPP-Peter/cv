@@ -26,7 +26,6 @@
         "spatie/laravel-medialibrary": "^10.0.0",
         "spatie/laravel-permission": "^6.2",
         "wamesk/laravel-api-response": "^1.1",
-        "wamesk/laravel-auth": "^3.0",
         "wamesk/laravel-commands": "^1.0"
     },
     "require-dev": {

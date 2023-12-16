@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
 
 Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], function () {
 
@@ -52,10 +53,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], funct
 
 });
 
-//Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], function (): void {
-//    Route::group(['prefix' => 'skill'], function () {
-//        Route::get('/index', [\App\Http\Controllers\PositionController::class, 'indexNotLogged'])->name('positionIndex');
-////        Route::get('/company/{companyId}/address', 'CompanyController@getAddressByCompanyId');
-////        Route::get('/customer/{customerId}/address/main', 'CustomerController@getCustomerMainAddress');
-//    });
-//});
+
+
+
+

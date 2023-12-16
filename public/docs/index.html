@@ -1,0 +1,1934 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Laravel Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var tryItOutBaseUrl = "http://cv";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-4.26.0.js"></script>
+
+    <script src="../docs/js/theme-default-4.26.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-certificate" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="certificate">
+                    <a href="#certificate">Certificate</a>
+                </li>
+                                    <ul id="tocify-subheader-certificate" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="certificate-GETapi-v1-certificate-index">
+                                <a href="#certificate-GETapi-v1-certificate-index">GET Certificate index</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="certificate-GETapi-v1-certificate--slug-">
+                                <a href="#certificate-GETapi-v1-certificate--slug-">GET Certificate show</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-job" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="job">
+                    <a href="#job">Job</a>
+                </li>
+                                    <ul id="tocify-subheader-job" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="job-GETapi-v1-job-index">
+                                <a href="#job-GETapi-v1-job-index">GET Job index</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="job-GETapi-v1-job--slug-">
+                                <a href="#job-GETapi-v1-job--slug-">GET Job show</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-profil" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="profil">
+                    <a href="#profil">Profil</a>
+                </li>
+                                    <ul id="tocify-subheader-profil" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="profil-GETapi-v1-profil-index">
+                                <a href="#profil-GETapi-v1-profil-index">GET Profil index</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-skill" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="skill">
+                    <a href="#skill">Skill</a>
+                </li>
+                                    <ul id="tocify-subheader-skill" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="skill-GETapi-v1-skill-index">
+                                <a href="#skill-GETapi-v1-skill-index">GET Skill index</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="skill-GETapi-v1-skill--slug-">
+                                <a href="#skill-GETapi-v1-skill--slug-">GET Skill show</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-tool" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="tool">
+                    <a href="#tool">Tool</a>
+                </li>
+                                    <ul id="tocify-subheader-tool" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="tool-GETapi-v1-tool-index">
+                                <a href="#tool-GETapi-v1-tool-index">GET Tool index</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="tool-GETapi-v1-tool--slug-">
+                                <a href="#tool-GETapi-v1-tool--slug-">GET Tool show</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: December 16, 2023</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<aside>
+    <strong>Base URL</strong>: <code>http://cv</code>
+</aside>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="certificate">Certificate</h1>
+
+    
+
+                                <h2 id="certificate-GETapi-v1-certificate-index">GET Certificate index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-certificate-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/certificate/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": 1,
+    \"per_page\": 20
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/certificate/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": 1,
+    "per_page": 20
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-certificate-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 44
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;01hhskp6g71sm9v6r6tgg96drs&quot;,
+            &quot;title&quot;: &quot;JavaScript&quot;,
+            &quot;description&quot;: &quot;JavaScript a ES6 - Skillmea&quot;,
+            &quot;status&quot;: 1,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:02.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskp7eh7bzg0nxam52jepz9&quot;,
+            &quot;title&quot;: &quot;PHP&quot;,
+            &quot;description&quot;: &quot;PHP - Skillmea&quot;,
+            &quot;status&quot;: 1,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://cv/api/v1/certificate/index?page=1&quot;,
+        &quot;last&quot;: &quot;http://cv/api/v1/certificate/index?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Predch&aacute;dzaj&uacute;ca&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://cv/api/v1/certificate/index?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Ďal&scaron;ia &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://cv/api/v1/certificate/index&quot;,
+        &quot;per_page&quot;: 20,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-certificate-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-certificate-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-certificate-index"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-certificate-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-certificate-index">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-certificate-index" data-method="GET"
+      data-path="api/v1/certificate/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-certificate-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-certificate-index"
+                    onclick="tryItOut('GETapi-v1-certificate-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-certificate-index"
+                    onclick="cancelTryOut('GETapi-v1-certificate-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-certificate-index"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/certificate/index</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-certificate-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-certificate-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-certificate-index"
+               value="1"
+               data-component="body">
+    <br>
+<p>Pagination page Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-v1-certificate-index"
+               value="20"
+               data-component="body">
+    <br>
+<p>Pagination per page Example: <code>20</code></p>
+        </div>
+        </form>
+
+                    <h2 id="certificate-GETapi-v1-certificate--slug-">GET Certificate show</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-certificate--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/certificate/01hhskp6g71sm9v6r6tgg96drs" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/certificate/01hhskp6g71sm9v6r6tgg96drs"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-certificate--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 43
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;01hhskp6g71sm9v6r6tgg96drs&quot;,
+        &quot;title&quot;: &quot;JavaScript&quot;,
+        &quot;description&quot;: &quot;JavaScript a ES6 - Skillmea&quot;,
+        &quot;status&quot;: 1,
+        &quot;created_at&quot;: &quot;2023-12-16T15:25:02.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-12-16T15:25:02.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-certificate--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-certificate--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-certificate--slug-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-certificate--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-certificate--slug-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-certificate--slug-" data-method="GET"
+      data-path="api/v1/certificate/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-certificate--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-certificate--slug-"
+                    onclick="tryItOut('GETapi-v1-certificate--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-certificate--slug-"
+                    onclick="cancelTryOut('GETapi-v1-certificate--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-certificate--slug-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/certificate/{slug}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-certificate--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-certificate--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>slug</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="slug"                data-endpoint="GETapi-v1-certificate--slug-"
+               value="01hhskp6g71sm9v6r6tgg96drs"
+               data-component="url">
+    <br>
+<p>The slug of the certificate. Example: <code>01hhskp6g71sm9v6r6tgg96drs</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-v1-certificate--slug-"
+               value="01gsa40bvafp2tewxh67bbphw2"
+               data-component="url">
+    <br>
+<p>ulid required Certificate id Example: <code>01gsa40bvafp2tewxh67bbphw2</code></p>
+            </div>
+                    </form>
+
+                <h1 id="job">Job</h1>
+
+    
+
+                                <h2 id="job-GETapi-v1-job-index">GET Job index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-job-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/job/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": 1,
+    \"per_page\": 20
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/job/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": 1,
+    "per_page": 20
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-job-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 46
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;title&quot;: &quot;Backend Developer&quot;,
+            &quot;description&quot;: &quot;Laravel a Laravel nova&quot;,
+            &quot;company&quot;: &quot;WAME&quot;,
+            &quot;from&quot;: &quot;2021-12-31T23:00:00.000000Z&quot;,
+            &quot;to&quot;: &quot;2022-12-31T23:00:00.000000Z&quot;
+        },
+        {
+            &quot;title&quot;: &quot;Wordpres program&aacute;tor&quot;,
+            &quot;description&quot;: &quot;Wordpres str&aacute;nky a Woocomerce eshopy&quot;,
+            &quot;company&quot;: &quot;B-commerce&quot;,
+            &quot;from&quot;: &quot;2021-12-31T23:00:00.000000Z&quot;,
+            &quot;to&quot;: &quot;2020-12-31T23:00:00.000000Z&quot;
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://cv/api/v1/job/index?page=1&quot;,
+        &quot;last&quot;: &quot;http://cv/api/v1/job/index?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Predch&aacute;dzaj&uacute;ca&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://cv/api/v1/job/index?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Ďal&scaron;ia &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://cv/api/v1/job/index&quot;,
+        &quot;per_page&quot;: 20,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-job-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-job-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-job-index"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-job-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-job-index">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-job-index" data-method="GET"
+      data-path="api/v1/job/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-job-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-job-index"
+                    onclick="tryItOut('GETapi-v1-job-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-job-index"
+                    onclick="cancelTryOut('GETapi-v1-job-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-job-index"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/job/index</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-job-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-job-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-job-index"
+               value="1"
+               data-component="body">
+    <br>
+<p>Pagination page Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-v1-job-index"
+               value="20"
+               data-component="body">
+    <br>
+<p>Pagination per page Example: <code>20</code></p>
+        </div>
+        </form>
+
+                    <h2 id="job-GETapi-v1-job--slug-">GET Job show</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-job--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/job/01hhsptjjtf0zcbjt6t05fyggs" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/job/01hhsptjjtf0zcbjt6t05fyggs"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-job--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 45
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;01hhsptjjtf0zcbjt6t05fyggs&quot;,
+        &quot;title&quot;: &quot;Backend Developer&quot;,
+        &quot;company&quot;: &quot;WAME&quot;,
+        &quot;description&quot;: &quot;Laravel a Laravel nova&quot;,
+        &quot;from&quot;: &quot;2021-12-31T23:00:00.000000Z&quot;,
+        &quot;to&quot;: &quot;2022-12-31T23:00:00.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2023-12-16T16:19:51.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-12-16T16:19:51.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-job--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-job--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-job--slug-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-job--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-job--slug-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-job--slug-" data-method="GET"
+      data-path="api/v1/job/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-job--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-job--slug-"
+                    onclick="tryItOut('GETapi-v1-job--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-job--slug-"
+                    onclick="cancelTryOut('GETapi-v1-job--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-job--slug-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/job/{slug}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-job--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-job--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>slug</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="slug"                data-endpoint="GETapi-v1-job--slug-"
+               value="01hhsptjjtf0zcbjt6t05fyggs"
+               data-component="url">
+    <br>
+<p>The slug of the job. Example: <code>01hhsptjjtf0zcbjt6t05fyggs</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-v1-job--slug-"
+               value="01gsa40bvafp2tewxh67bbphw2"
+               data-component="url">
+    <br>
+<p>ulid required Job id Example: <code>01gsa40bvafp2tewxh67bbphw2</code></p>
+            </div>
+                    </form>
+
+                <h1 id="profil">Profil</h1>
+
+    
+
+                                <h2 id="profil-GETapi-v1-profil-index">GET Profil index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-profil-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/profil/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": 1,
+    \"per_page\": 20
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/profil/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": 1,
+    "per_page": 20
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-profil-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 42
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;jobs&quot;: [
+                &quot;Backend Developer&quot;,
+                &quot;Wordpres program&aacute;tor&quot;
+            ],
+            &quot;favorite_tools&quot;: [
+                &quot;Php Storm&quot;,
+                &quot;Visual Studio Code&quot;,
+                &quot;Git / GitHub&quot;,
+                &quot;Heidi SQL&quot;,
+                &quot;MAMP / Laragon&quot;,
+                &quot;Postman / Insomnia&quot;,
+                &quot;Chat GPT&quot;
+            ],
+            &quot;certificates&quot;: [
+                &quot;JavaScript&quot;,
+                &quot;PHP&quot;
+            ],
+            &quot;skills&quot;: [
+                {
+                    &quot;title&quot;: &quot;JavaScript&quot;,
+                    &quot;description&quot;: &quot;pokročil&yacute;&quot;
+                },
+                {
+                    &quot;title&quot;: &quot;PHP&quot;,
+                    &quot;description&quot;: &quot;pokročil&yacute;&quot;
+                }
+            ]
+        }
+    ],
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-profil-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-profil-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-profil-index"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-profil-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-profil-index">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-profil-index" data-method="GET"
+      data-path="api/v1/profil/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-profil-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-profil-index"
+                    onclick="tryItOut('GETapi-v1-profil-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-profil-index"
+                    onclick="cancelTryOut('GETapi-v1-profil-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-profil-index"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/profil/index</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-profil-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-profil-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-profil-index"
+               value="1"
+               data-component="body">
+    <br>
+<p>Pagination page Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-v1-profil-index"
+               value="20"
+               data-component="body">
+    <br>
+<p>Pagination per page Example: <code>20</code></p>
+        </div>
+        </form>
+
+                <h1 id="skill">Skill</h1>
+
+    
+
+                                <h2 id="skill-GETapi-v1-skill-index">GET Skill index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-skill-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/skill/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": 1,
+    \"per_page\": 20
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/skill/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": 1,
+    "per_page": 20
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-skill-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 50
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;title&quot;: &quot;JavaScript&quot;,
+            &quot;description&quot;: &quot;pokročil&yacute;&quot;,
+            &quot;progress&quot;: 80,
+            &quot;status&quot;: 1
+        },
+        {
+            &quot;title&quot;: &quot;PHP&quot;,
+            &quot;description&quot;: &quot;pokročil&yacute;&quot;,
+            &quot;progress&quot;: 80,
+            &quot;status&quot;: 1
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://cv/api/v1/skill/index?page=1&quot;,
+        &quot;last&quot;: &quot;http://cv/api/v1/skill/index?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Predch&aacute;dzaj&uacute;ca&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://cv/api/v1/skill/index?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Ďal&scaron;ia &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://cv/api/v1/skill/index&quot;,
+        &quot;per_page&quot;: 20,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-skill-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-skill-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-skill-index"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-skill-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-skill-index">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-skill-index" data-method="GET"
+      data-path="api/v1/skill/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-skill-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-skill-index"
+                    onclick="tryItOut('GETapi-v1-skill-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-skill-index"
+                    onclick="cancelTryOut('GETapi-v1-skill-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-skill-index"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/skill/index</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-skill-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-skill-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-skill-index"
+               value="1"
+               data-component="body">
+    <br>
+<p>Pagination page Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-v1-skill-index"
+               value="20"
+               data-component="body">
+    <br>
+<p>Pagination per page Example: <code>20</code></p>
+        </div>
+        </form>
+
+                    <h2 id="skill-GETapi-v1-skill--slug-">GET Skill show</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-skill--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/skill/01hhskp82j73b819zd0bfm68nh" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/skill/01hhskp82j73b819zd0bfm68nh"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-skill--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 49
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;01hhskp82j73b819zd0bfm68nh&quot;,
+        &quot;title&quot;: &quot;JavaScript&quot;,
+        &quot;description&quot;: &quot;pokročil&yacute;&quot;,
+        &quot;status&quot;: 1,
+        &quot;progress&quot;: 80,
+        &quot;created_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-skill--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-skill--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-skill--slug-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-skill--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-skill--slug-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-skill--slug-" data-method="GET"
+      data-path="api/v1/skill/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-skill--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-skill--slug-"
+                    onclick="tryItOut('GETapi-v1-skill--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-skill--slug-"
+                    onclick="cancelTryOut('GETapi-v1-skill--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-skill--slug-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/skill/{slug}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-skill--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-skill--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>slug</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="slug"                data-endpoint="GETapi-v1-skill--slug-"
+               value="01hhskp82j73b819zd0bfm68nh"
+               data-component="url">
+    <br>
+<p>The slug of the skill. Example: <code>01hhskp82j73b819zd0bfm68nh</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-v1-skill--slug-"
+               value="01gsa40bvafp2tewxh67bbphw2"
+               data-component="url">
+    <br>
+<p>ulid required Skill id Example: <code>01gsa40bvafp2tewxh67bbphw2</code></p>
+            </div>
+                    </form>
+
+                <h1 id="tool">Tool</h1>
+
+    
+
+                                <h2 id="tool-GETapi-v1-tool-index">GET Tool index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-tool-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/tool/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": 1,
+    \"per_page\": 20
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/tool/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": 1,
+    "per_page": 20
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-tool-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 48
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;01hhskp83f1r2169gyn0y793hg&quot;,
+            &quot;title&quot;: &quot;Php Storm&quot;,
+            &quot;description&quot;: &quot;IDE&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 1,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskp8eqzgpx29d6n5vhy7hr&quot;,
+            &quot;title&quot;: &quot;Visual Studio Code&quot;,
+            &quot;description&quot;: &quot;Editor&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 2,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:04.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:04.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskp8qy6ckmvby8b1mrnme0&quot;,
+            &quot;title&quot;: &quot;Git / GitHub&quot;,
+            &quot;description&quot;: &quot;Verzovanie k&oacute;du&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 3,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:04.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:04.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskp9pkvfed03et00wzhtdz&quot;,
+            &quot;title&quot;: &quot;Heidi SQL&quot;,
+            &quot;description&quot;: &quot;Pr&aacute;ca s DB&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 4,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:05.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:05.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskpxnc5c3p81zzana0m908&quot;,
+            &quot;title&quot;: &quot;MAMP / Laragon&quot;,
+            &quot;description&quot;: &quot;Pre pr&aacute;cu na localhoste&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 5,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:26.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskpy1teefab48enr48bg5n&quot;,
+            &quot;title&quot;: &quot;Postman / Insomnia&quot;,
+            &quot;description&quot;: &quot;Pre testovanie API&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 6,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:26.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;01hhskpyb1h893aqvamkpwtvf6&quot;,
+            &quot;title&quot;: &quot;Chat GPT&quot;,
+            &quot;description&quot;: &quot;Užitočn&yacute; pomocn&iacute;k pri p&iacute;san&iacute; k&oacute;du&quot;,
+            &quot;status&quot;: 1,
+            &quot;priority&quot;: 7,
+            &quot;created_at&quot;: &quot;2023-12-16T15:25:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-12-16T15:25:26.000000Z&quot;,
+            &quot;deleted_at&quot;: null
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://cv/api/v1/tool/index?page=1&quot;,
+        &quot;last&quot;: &quot;http://cv/api/v1/tool/index?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Predch&aacute;dzaj&uacute;ca&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://cv/api/v1/tool/index?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Ďal&scaron;ia &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://cv/api/v1/tool/index&quot;,
+        &quot;per_page&quot;: 20,
+        &quot;to&quot;: 7,
+        &quot;total&quot;: 7
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-tool-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-tool-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-tool-index"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-tool-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-tool-index">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-tool-index" data-method="GET"
+      data-path="api/v1/tool/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-tool-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-tool-index"
+                    onclick="tryItOut('GETapi-v1-tool-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-tool-index"
+                    onclick="cancelTryOut('GETapi-v1-tool-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-tool-index"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/tool/index</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-tool-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-tool-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-tool-index"
+               value="1"
+               data-component="body">
+    <br>
+<p>Pagination page Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-v1-tool-index"
+               value="20"
+               data-component="body">
+    <br>
+<p>Pagination per page Example: <code>20</code></p>
+        </div>
+        </form>
+
+                    <h2 id="tool-GETapi-v1-tool--slug-">GET Tool show</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-tool--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://cv/api/v1/tool/01hhskp83f1r2169gyn0y793hg" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://cv/api/v1/tool/01hhskp83f1r2169gyn0y793hg"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-tool--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 47
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;01hhskp83f1r2169gyn0y793hg&quot;,
+        &quot;title&quot;: &quot;Php Storm&quot;,
+        &quot;description&quot;: &quot;IDE&quot;,
+        &quot;status&quot;: 1,
+        &quot;priority&quot;: 1,
+        &quot;created_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-12-16T15:25:03.000000Z&quot;,
+        &quot;deleted_at&quot;: null
+    },
+    &quot;code&quot;: &quot;1&quot;,
+    &quot;errors&quot;: null,
+    &quot;additional_data&quot;: null,
+    &quot;message&quot;: &quot;Požiadavka bola &uacute;spe&scaron;ne vr&aacute;ten&aacute;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-tool--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-tool--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-tool--slug-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-tool--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-tool--slug-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-tool--slug-" data-method="GET"
+      data-path="api/v1/tool/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-tool--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-tool--slug-"
+                    onclick="tryItOut('GETapi-v1-tool--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-tool--slug-"
+                    onclick="cancelTryOut('GETapi-v1-tool--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-tool--slug-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/tool/{slug}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-tool--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-tool--slug-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>slug</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="slug"                data-endpoint="GETapi-v1-tool--slug-"
+               value="01hhskp83f1r2169gyn0y793hg"
+               data-component="url">
+    <br>
+<p>The slug of the tool. Example: <code>01hhskp83f1r2169gyn0y793hg</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-v1-tool--slug-"
+               value="01gsa40bvafp2tewxh67bbphw2"
+               data-component="url">
+    <br>
+<p>ulid required Tool id Example: <code>01gsa40bvafp2tewxh67bbphw2</code></p>
+            </div>
+                    </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>
