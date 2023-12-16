@@ -51,10 +51,10 @@ class Certificate extends BaseResource
             Tabs::make(__('certificate.detail', ['title' => $this->title]), [
                 Tab::make(__('certificate.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make('title', 'title'),
-                    Text::make('description', 'description'),
-                    Number::make('status', 'status'),
-                    Images::make(__('image'), 'certificate_image'),
+                    Text::make(__('fields.title'), 'title'),
+                    Text::make(__('fields.description'), 'description'),
+                    Number::make(__('fields.status'), 'status'),
+                    Images::make(__('fields.image'), 'certificate_image'),
                 ]),
             ])->withToolbar(),
         ];

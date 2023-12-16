@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\v1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\JobResource;
@@ -28,7 +28,7 @@ class JobController extends Controller
     public function index(Request $request): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate($request->all(), [
+            $validator = Validator::code('0')->validate($request->all(), [
                 'page' => 'integer|min:1',
                 'per_page' => 'integer|min:1'
             ]);
@@ -36,11 +36,11 @@ class JobController extends Controller
 
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
-            $data = Job::paginate($perPage);
+            $data = Job::select('title', 'description', 'company', 'from', 'to')->paginate($perPage);
 
-            return ApiResponse::collection($data, JobResource::class)->code()->response();
+            return ApiResponse::collection($data, JobResource::class)->code('1')->response();
         } catch (\Exception $e) {
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
@@ -53,7 +53,7 @@ class JobController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate($request->all(), [
+            $validator = Validator::code('0')->validate($request->all(), [
 
             ]);
             if ($validator) return $validator;
@@ -66,10 +66,10 @@ class JobController extends Controller
 
             DB::commit();
 
-            return ApiResponse::data(JobResource::make($entity))->code()->response(201);
+            return ApiResponse::data(JobResource::make($entity))->code('1')->response(201);
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
@@ -84,16 +84,16 @@ class JobController extends Controller
     public function show(string $id): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate(['id' => $id], [
+            $validator = Validator::code('0')->validate(['id' => $id], [
                 'id' => 'ulid|required|exists:jobs,id,deleted_at,NULL',
             ]);
             if ($validator) return $validator;
 
             $entity = Job::find($id);
 
-            return ApiResponse::data(JobResource::make($entity))->code()->response();
+            return ApiResponse::data(JobResource::make($entity))->code('1')->response();
         } catch (\Exception $e) {
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
@@ -112,7 +112,7 @@ class JobController extends Controller
             $validate = $request->all();
             $validate['id'] = $id;
 
-            $validator = Validator::code()->validate($validate, [
+            $validator = Validator::code('0')->validate($validate, [
                 'id' => 'ulid|required|exists:jobs,id,deleted_at,NULL',
             ]);
             if ($validator) return $validator;
@@ -127,10 +127,10 @@ class JobController extends Controller
 
             DB::commit();
 
-            return ApiResponse::data(JobResource::make($entity))->code()->response();
+            return ApiResponse::data(JobResource::make($entity))->code('1')->response();
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
@@ -145,7 +145,7 @@ class JobController extends Controller
     public function delete(string $id): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate(['id' => $id], [
+            $validator = Validator::code('0')->validate(['id' => $id], [
                 'id' => 'ulid|required|exists:jobs,id,deleted_at,NULL',
             ]);
             if ($validator) return $validator;
@@ -157,10 +157,10 @@ class JobController extends Controller
 
             DB::commit();
 
-            return ApiResponse::data(JobResource::make($entity))->code()->response();
+            return ApiResponse::data(JobResource::make($entity))->code('1')->response();
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 }

@@ -51,11 +51,11 @@ class Job extends BaseResource
             Tabs::make(__('job.detail', ['title' => $this->title]), [
                 Tab::make(__('job.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make('title', 'title'),
-                    Text::make('company', 'company'),
-                    Text::make('description', 'description'),
-                    Date::make('from', 'from'),
-                    Date::make('to', 'to'),
+                    Text::make(__('fields.title'), 'title'),
+                    Text::make(__('fields.company'), 'company'),
+                    Text::make(__('fields.description'), 'description'),
+                    Date::make(__('fields.from'), 'from'),
+                    Date::make(__('fields.to'), 'to'),
                 ]),
             ])->withToolbar(),
         ];

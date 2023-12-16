@@ -8,6 +8,8 @@ return [
     'users' => 'Užívatelia',
     'avatar' => 'Avatar',
     'name' => 'Meno',
+    'from' => 'Od',
+    'to' => 'Do',
     'number' => 'Číslo',
     'date' => 'Dátum',
     'status' => 'Status',

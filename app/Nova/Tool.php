@@ -51,11 +51,11 @@ class Tool extends BaseResource
             Tabs::make(__('tool.detail', ['title' => $this->title]), [
                 Tab::make(__('tool.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make('title', 'title'),
-                    Text::make('description', 'description'),
-                    Number::make('priority', 'priority'),
-                    Number::make('status', 'status'),
-                    Images::make(__('image'), 'tool_image'),
+                    Text::make(__('fields.title'), 'title'),
+                    Text::make(__('fields.description'), 'description'),
+                    Number::make(__('priority'), 'priority'),
+                    Number::make(__('fields.status'), 'status'),
+                    Images::make(__('fields.image'), 'tool_image'),
                 ]),
             ])->withToolbar(),
         ];

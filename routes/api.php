@@ -32,6 +32,12 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], funct
         Route::get('/{slug}', 'ToolController@show')->name('toolShow');
     });
 
+    // JOBS
+    Route::group(['prefix' => 'job'], function () {
+        Route::get('/index', 'JobController@index')->name('jobIndex');
+        Route::get('/{slug}', 'JobController@show')->name('jobShow');
+    });
+
     // CERTIFICATE
     Route::group(['prefix' => 'certificate'], function () {
         Route::get('/index', 'CertificateController@index')->name('certificateIndex');

@@ -2,6 +2,7 @@
   <Card class="flex flex-col items-center justify-center">
     <div class="px-3 py-3">
       <h1 class="json text-center text-3xl text-gray-500 font-bold">Json</h1>
+
       <p id="json" class=" text-white font-light">
           <vue-json-pretty :data="this.profil"
                            :deep="1"
@@ -15,6 +16,13 @@
                            @showIcon="true"
           />
         </p>
+        <a :href="'/api/v1/skill/index'">
+            <p class="json text-center text-gray-500 font-bold">API links: </p>
+            <p class="json text-center text-gray-500 font-bold">short_profil: <span class="font-medium">{{this.link() + '/api/v1/profil/index' }}</span></p>
+            <p class="json text-center text-gray-500 font-bold">skills: <span>{{this.link() + '/api/v1/skill/index' }}</span></p>
+            <p class="json text-center text-gray-500 font-bold">jobs: <span>{{this.link() + '/api/v1/job/index' }}</span></p>
+            <p class="json text-center text-gray-500 font-bold">documentation: <span>{{this.link() + '/scribe' }}</span></p>
+        </a>
     </div>
   </Card>
 </template>
@@ -56,6 +64,9 @@ export default {
                     return response.data
                 })
         },
+        link() {
+            return window.location.origin;
+        }
     },
 
   mounted() {

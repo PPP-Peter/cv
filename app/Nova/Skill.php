@@ -50,10 +50,10 @@ class Skill extends BaseResource
             Tabs::make(__('skill.detail', ['title' => $this->title]), [
                 Tab::make(__('skill.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make('title', 'title'),
-                    Text::make('description', 'description'),
-                    Number::make('progress', 'progress'),
-                    Number::make('status', 'status'),
+                    Text::make(__('fields.title'), 'title'),
+                    Text::make(__('fields.description'), 'description'),
+                    Number::make(__('fields.progress'), 'progress'),
+                    Number::make(__('fields.status'), 'status'),
                 ]),
             ])->withToolbar(),
         ];

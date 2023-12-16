@@ -78,6 +78,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee2);
       }))();
+    },
+    link: function link() {
+      return window.location.origin;
     }
   },
   mounted: function mounted() {
@@ -112,6 +115,27 @@ var _hoisted_3 = {
   id: "json",
   "class": "text-white font-light"
 };
+var _hoisted_4 = {
+  href: '/api/v1/skill/index'
+};
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "json text-center text-gray-500 font-bold"
+}, "API links: ", -1 /* HOISTED */);
+var _hoisted_6 = {
+  "class": "json text-center text-gray-500 font-bold"
+};
+var _hoisted_7 = {
+  "class": "font-medium"
+};
+var _hoisted_8 = {
+  "class": "json text-center text-gray-500 font-bold"
+};
+var _hoisted_9 = {
+  "class": "json text-center text-gray-500 font-bold"
+};
+var _hoisted_10 = {
+  "class": "json text-center text-gray-500 font-bold"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _this = this;
   var _component_vue_json_pretty = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("vue-json-pretty");
@@ -143,7 +167,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onShowIcon: function onShowIcon($event) {
           return true;
         }
-      }, null, 8 /* PROPS */, ["data"])])])];
+      }, null, 8 /* PROPS */, ["data"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("short_profil: "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_this.link() + '/api/v1/profil/index'), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("skills: "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_this.link() + '/api/v1/skill/index'), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("jobs: "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_this.link() + '/api/v1/job/index'), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("documentation: "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_this.link() + '/scribe'), 1 /* TEXT */)])])])];
     }),
     _: 1 /* STABLE */
   });

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\v1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SkillResource;
+use App\Models\Certificate;
+use App\Models\Job;
 use App\Models\Skill;
 use App\Models\Tool;
 use Illuminate\Http\JsonResponse;
@@ -38,10 +40,11 @@ class ProfilController extends Controller
 
             $data = [
                 [
+                    'jobs' => Job::all()->pluck('title'),
+                    'favorite_tools' => Tool::all()->pluck('title'),
+                    'certificates' => Certificate::all()->pluck('title'),
                     'skills' => Skill::select('title', 'description')->get(),
-                'tools' => Tool::select('title', 'description')->get(),
-                'certificates' => Tool::all()->pluck('title'),
-                    ]
+                ]
             ];
 
             return ApiResponse::data($data)->code('1')->response();
