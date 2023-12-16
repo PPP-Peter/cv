@@ -16,22 +16,9 @@ class MainMenu
 {
     public static function make()
     {
-        //  Use MainMenu::make();
         Nova::mainMenu(function (Request $request, Menu $menu) {
 
             if (!Auth::user()) return;
-
-//            if (Auth::user()->hasAnyRole(['admin', 'super-admin'])){
-//                isset($menu->items[2]) ? $permissionmenu =  $menu->items[2] : $permissionmenu='';
-//                unset($permissionmenu->items[1]);
-//                return [ AdminMenu::make(),  $permissionmenu ];
-//            }
-//
-//            else if (Auth::user()->hasRole('manager')){
-//                return [ ManagerMenu::make() ];
-//            }
-
-            isset($menu->items[2]) ? $permissionmenu =  $menu->items[2] : $permissionmenu='';
 
             return [
                 MenuSection::dashboard('\App\Nova\Dashboards\Main')->icon('view-grid'),
@@ -40,13 +27,21 @@ class MainMenu
                     MenuItem::resource('\App\Nova\User'),
                 ])->collapsable()->collapsible()->icon('user'),
 
-                $permissionmenu ->canSee(function ($request) {
-                    return $request->user()->isAnyAdmin();
-                }),
+                MenuSection::make(__('fields.menu.certificates'), [
+                    MenuItem::resource('\App\Nova\Certificate'),
+                ])->collapsable()->collapsible()->icon('clipboard-list'),
+
+                MenuSection::make(__('fields.menu.skills'), [
+                    MenuItem::resource('\App\Nova\Skill'),
+                ])->collapsable()->collapsible()->icon('book-open'),
+
+                MenuSection::make(__('fields.menu.tools'), [
+                    MenuItem::resource('\App\Nova\Tool'),
+                ])->collapsable()->collapsible()->icon('puzzle'),
 
             ];
 
         });
-        
+
     }
 }

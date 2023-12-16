@@ -44,9 +44,9 @@ class User extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->onlyOnForms()->sortable(),
 
-            Gravatar::make()->maxWidth(50),
+//            Gravatar::make()->maxWidth(50),
 
             Text::make('Name')
                 ->sortable()

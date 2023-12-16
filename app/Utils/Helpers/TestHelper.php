@@ -2,6 +2,7 @@
 
 namespace App\Utils\Helpers;
 
+use App\Models\User;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
@@ -14,8 +15,8 @@ class TestHelper
     {
         return env('nologin') ? User::find($user_id) : auth()->user();
     }
-    
-    
+
+
     public static function user($user = 'user')
     {
         if ($user == 'random') $user = User::inRandomOrder()->first();
@@ -31,7 +32,7 @@ class TestHelper
         if (!$per_page) $per_page = rand(1,20);
         return $per_page;
     }
-    
+
 
     public static function testDump($response, $method = null)
     {
@@ -51,7 +52,7 @@ class TestHelper
     }
 
 
-        
+
     public static function token($token=null)
     {
         if (!$token) $token = '';

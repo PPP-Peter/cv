@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Group;
 use App\Models\User;
 use Faker\Factory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Nette\Utils\Strings;
@@ -18,23 +16,23 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         //super admin
-        $super_admin = $this->getUpdateOrCreate('wame@wame.sk', 'Wame',  Hash::make('testwame'), ['id' => '01gzbb5nnjyb7k0tn659e1v1k1'] )
+        $super_admin = $this->getUpdateOrCreate('user@user.sk', 'Super-admin',  Hash::make('testuser'), ['id' => '01gzbb5nnjyb7k0tn659e1v1k1'] )
             ->syncRoles('super-admin');
 
         // admin
-        $super_admin = $this->getUpdateOrCreate('test1@wame.sk', 'Admin',  Hash::make('testwame'), ['id' => '01gzbb5nnjyb7k0tn659e1v1kq'] )
+        $super_admin = $this->getUpdateOrCreate('test1@user.sk', 'Admin',  Hash::make('testuser'), ['id' => '01gzbb5nnjyb7k0tn659e1v1kq'] )
             ->syncRoles('admin');
 
         // manager
-        $manager = $this->getUpdateOrCreate('test2@wame.sk', 'Manažér',  Hash::make('testwame'),  null)
+        $manager = $this->getUpdateOrCreate('test2@user.sk', 'Manažér',  Hash::make('testuser'),  null)
             ->assignRole('manager');
 
         //user
-        $testuser = $this->getUpdateOrCreate('testuser@wame.sk', 'Test User',  Hash::make('testwame'), null )
+        $testuser = $this->getUpdateOrCreate('testuser@user.sk', 'Test User',  Hash::make('testuser'), null )
             ->assignRole('user');
 
-        // frontak
-        $frontak = $this->getUpdateOrCreate('ado.stosil@gmail.com', 'Ado Test', Hash::make('testwame'), null)
+        // guest
+        $frontak = $this->getUpdateOrCreate('guest@guest.sk', 'Guest', Hash::make('testuser'), null)
             ->assignRole('user');
 
         // managers
@@ -62,7 +60,7 @@ class UserSeeder extends Seeder
         $firstName = $faker->firstName;
         $lastName = $faker->lastName;
         $name = $name ?: $firstName . ' ' . $lastName;
-        $email = $email ?: Strings::toAscii(strtolower($firstName . '.' . $lastName)) . '@wame.sk';
+        $email = $email ?: Strings::toAscii(strtolower($firstName . '.' . $lastName)) . '@user.sk';
         $password = $password ?: Hash::make('password');
         $randomNumber = random_int(1, 10);
         $more ? $more = [key($more) =>  $more[key($more)]]: $more = [];

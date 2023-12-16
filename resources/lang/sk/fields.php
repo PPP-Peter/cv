@@ -4,7 +4,6 @@ return [
     'text' => 'Text',
     'description' => 'Popis',
     'title' => 'Názov',
-    'status' => 'Status',
     'user' => 'Užívateľ',
     'users' => 'Užívatelia',
     'avatar' => 'Avatar',
@@ -16,15 +15,11 @@ return [
     'email' => 'Email',
     'password' => 'Heslo',
     'image' => 'Obrázok',
-    'date' => 'Dátum',
-    'active' => 'Aktívny',
     'role' => 'Rola',
     'Roles' => 'Roly',
     'Permissions' => 'Práva',
-    'type' => 'Typ',
     'color' => 'Farba',
     'phone' => 'Telefón',
-    'image' => 'Obrázok',
     'active' => 'Aktívny',
     'type' => 'Typ',
     'notice' => 'Poznámka',
@@ -44,5 +39,8 @@ return [
     'export_csv' => 'Exportovať ako CSV',
 
     "menu.documents" => "Dokumenty",
-    "menu.users" => "Užívatelia"
+    "menu.users" => "Užívatelia",
+    "menu.certificates" => "Certifikáty",
+    "menu.skills" => "Schopnosti",
+    "menu.tools" => "Nástroje"
 ];
