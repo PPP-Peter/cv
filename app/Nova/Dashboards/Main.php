@@ -8,6 +8,7 @@ use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Dashboards\Main as Dashboard;
 use Pppcreative\About\About;
+use Pppcreative\Json\Json;
 use Pppcreative\Tabs\Tabs;
 use Wame\DatePicker\DatePicker;
 
@@ -59,6 +60,9 @@ class Main extends Dashboard
                                 </a>
                             </div>'
             ),
+
+            (new Json())->width('full'),
+
 
 //            (new DatePicker())->width('full'),
 //            (new AllUserPerDay())->width('1/2'),

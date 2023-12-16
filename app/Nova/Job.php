@@ -1,11 +1,15 @@
-<?php 
+<?php
 
 namespace App\Nova;
 
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Job extends BaseResource
@@ -32,7 +36,7 @@ class Job extends BaseResource
      * @var array
      */
     public static $search = [
-        'id', 
+        'id',
     ];
 
     /**
@@ -47,6 +51,11 @@ class Job extends BaseResource
             Tabs::make(__('job.detail', ['title' => $this->title]), [
                 Tab::make(__('job.singular'), [
                     ID::make()->onlyOnForms(),
+                    Text::make('title', 'title'),
+                    Text::make('company', 'company'),
+                    Text::make('description', 'description'),
+                    Date::make('from', 'from'),
+                    Date::make('to', 'to'),
                 ]),
             ])->withToolbar(),
         ];

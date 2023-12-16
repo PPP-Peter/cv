@@ -17,7 +17,11 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->word(),
+            'company' => fake()->word(),
+            'description' => fake()->paragraphs(1, true),
+            'from' => fake()->dateTime(),
+            'to' => fake()->dateTime(),
         ];
     }
 }

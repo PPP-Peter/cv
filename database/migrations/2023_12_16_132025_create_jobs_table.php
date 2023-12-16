@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->ulid('id')->primary();
+            $table->string('title');
+            $table->string('company');
+            $table->text('description');
+            $table->dateTime('from');
+            $table->dateTime('to');
             $table->datetimes();
             $table->softDeletesDatetime();
         });

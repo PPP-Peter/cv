@@ -39,6 +39,11 @@ class MainMenu
                     MenuItem::resource('\App\Nova\Tool'),
                 ])->collapsable()->collapsible()->icon('puzzle'),
 
+                MenuSection::make(__('fields.menu.jobs'), [
+                    MenuItem::resource('\App\Nova\Job'),
+                ])->collapsable()->collapsible()->icon('briefcase'),
+
+
             ];
 
         });

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -16,5 +16,7 @@ class Job extends BaseModel
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
+        'from' => 'datetime',
+        'to' => 'datetime',
     ];
 }

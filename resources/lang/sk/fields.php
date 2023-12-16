@@ -42,5 +42,6 @@ return [
     "menu.users" => "Užívatelia",
     "menu.certificates" => "Certifikáty",
     "menu.skills" => "Schopnosti",
-    "menu.tools" => "Nástroje"
+    "menu.tools" => "Nástroje",
+    "menu.jobs" => "Pozície"
 ];

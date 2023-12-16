@@ -30,6 +30,7 @@ class RolesAndPermissionsSeeder extends Seeder
             'Certificate' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
             'Skill' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
             'Tool' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
+            'Job' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
         ];
 
         $permissions = [
