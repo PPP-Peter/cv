@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/endpoint', function (Request $request) {
-//     //
-// });
+Route::get('profil', [\App\Http\Controllers\v1\ProfilController::class, 'index']);
+Route::get('skills', [\App\Http\Controllers\v1\SkillController::class, 'index']);

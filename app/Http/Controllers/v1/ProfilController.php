@@ -37,9 +37,11 @@ class ProfilController extends Controller
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
             $data = [
-                'skills' => Skill::select('title', 'description')->get(),
+                [
+                    'skills' => Skill::select('title', 'description')->get(),
                 'tools' => Tool::select('title', 'description')->get(),
                 'certificates' => Tool::all()->pluck('title'),
+                    ]
             ];
 
             return ApiResponse::data($data)->code('1')->response();

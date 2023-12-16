@@ -9,7 +9,6 @@ use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Dashboards\Main as Dashboard;
 use Pppcreative\About\About;
 use Pppcreative\Json\Json;
-use Pppcreative\Tabs\Tabs;
 use Wame\DatePicker\DatePicker;
 
 class Main extends Dashboard
@@ -26,9 +25,18 @@ class Main extends Dashboard
 
             (new HtmlCard())->width('1/4')->html(
                 '<div style="margin:auto">
+                                <a href="/resources/jobs" style="text-align: center" class="h-2 text-lg"><h1>Jobs</h1>
+                                     <div style="width: 85px; margin:auto">
+                                          <img src="/storage/img/job.png">
+                                    </div>
+                                </a>
+                            </div>'
+            ),
+            (new HtmlCard())->width('1/4')->html(
+                '<div style="margin:auto">
                                 <a href="/resources/tools" style="text-align: center" class="h-2 text-lg"><h1>Nástroje</h1>
-                                     <div style="width: 85px; padding-top:10px; margin:auto">
-                                         <img src="https://cdn-icons-png.flaticon.com/128/675/675579.png">
+                                     <div style="width: 80px; padding-top:10px; margin:auto">
+                                          <img src="/storage/img/settings.png">
                                     </div>
                                 </a>
                             </div>'
@@ -51,15 +59,7 @@ class Main extends Dashboard
                                 </a>
                             </div>'
             ),
-            (new HtmlCard())->width('1/4')->html(
-                '<div style="margin:auto">
-                                <a href="/resources/jobs" style="text-align: center" class="h-2 text-lg"><h1>Jobs</h1>
-                                     <div style="width: 85px; margin:auto">
-                                          <img src="/storage/img/job.png">
-                                    </div>
-                                </a>
-                            </div>'
-            ),
+
 
             (new Json())->width('full'),
 

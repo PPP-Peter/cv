@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
@@ -54,6 +55,7 @@ class Tool extends BaseResource
                     Text::make('description', 'description'),
                     Number::make('priority', 'priority'),
                     Number::make('status', 'status'),
+                    Images::make(__('image'), 'tool_image'),
                 ]),
             ])->withToolbar(),
         ];

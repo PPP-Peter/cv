@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
@@ -53,6 +54,7 @@ class Certificate extends BaseResource
                     Text::make('title', 'title'),
                     Text::make('description', 'description'),
                     Number::make('status', 'status'),
+                    Images::make(__('image'), 'certificate_image'),
                 ]),
             ])->withToolbar(),
         ];

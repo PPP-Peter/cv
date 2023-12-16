@@ -1,0 +1,11 @@
+.htmlCard__content img:hover{
+    transform: scale(1.07);
+    transition: all .5s ease;
+    position: relative;
+}
+.htmlCard__content img{
+    z-index: 999;
+}
+.htmlCard__content {
+    overflow:hidden;
+}
