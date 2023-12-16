@@ -38,6 +38,12 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], funct
         Route::get('/{slug}', 'CertificateController@show')->name('certificateShow');
     });
 
+    // PROFIL
+    Route::group(['prefix' => 'profil'], function () {
+        Route::get('/index', 'ProfilController@index')->name('profilIndex');
+        Route::get('/{slug}', 'ProfilController@show')->name('profilShow');
+    });
+
 });
 
 //Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], function (): void {

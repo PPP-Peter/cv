@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2818e091d5b3b8e60c75c1ab1604e755",
+    "content-hash": "d87e2a24f508e9daed13c48010c7f5a3",
     "packages": [
         {
             "name": "brick/math",
@@ -2049,6 +2049,60 @@
                 }
             ],
             "time": "2023-10-27T10:59:02+00:00"
+        },
+        {
+            "name": "interaction-design-foundation/nova-html-card",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InteractionDesignFoundation/nova-html-card.git",
+                "reference": "5b4fd48d116a0fb42f190cfa3d200dcc93d9416a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InteractionDesignFoundation/nova-html-card/zipball/5b4fd48d116a0fb42f190cfa3d200dcc93d9416a",
+                "reference": "5b4fd48d116a0fb42f190cfa3d200dcc93d9416a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^4.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "InteractionDesignFoundation\\HtmlCard\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "InteractionDesignFoundation\\HtmlCard\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card to display arbitrary HTML content",
+            "keywords": [
+                "card",
+                "html",
+                "laravel",
+                "markdown",
+                "nova",
+                "text"
+            ],
+            "support": {
+                "issues": "https://github.com/InteractionDesignFoundation/nova-html-card/issues",
+                "source": "https://github.com/InteractionDesignFoundation/nova-html-card/tree/3.1.0"
+            },
+            "time": "2023-01-05T07:47:16+00:00"
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -5574,6 +5628,42 @@
             "time": "2023-11-27T11:13:31+00:00"
         },
         {
+            "name": "pppcreative/about",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/About",
+                "reference": "f8368090e0fe155ce578dafe740f59356525f133"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pppcreative\\About\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pppcreative\\About\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "pppcreative/date-picker",
             "version": "1.2",
             "source": {
@@ -5618,6 +5708,42 @@
                 "source": "https://github.com/PPP-Peter/nova-date-picker/tree/1.2"
             },
             "time": "2023-06-23T10:33:14+00:00"
+        },
+        {
+            "name": "pppcreative/json",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Json",
+                "reference": "89eef5af0ef09da3a46c3be0b68ec854ceb66d6a"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pppcreative\\Json\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pppcreative\\Json\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "pppcreative/select-badge",
@@ -12606,7 +12732,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "pppcreative/about": 20,
+        "pppcreative/json": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

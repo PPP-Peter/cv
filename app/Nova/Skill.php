@@ -5,6 +5,7 @@ namespace App\Nova;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
+use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
@@ -66,7 +67,11 @@ class Skill extends BaseResource
      */
     public function cards(NovaRequest $request)
     {
-        return [];
+        return [
+            (new HtmlCard())->width('full')->html(
+                '<h1>Schopnosti a znalosti z oblasti programovania</h1>'
+            ),
+        ];
     }
 
     /**

@@ -1,99 +1,110 @@
 {
-  "name": "laravel/laravel",
-  "type": "project",
-  "description": "The skeleton application for the Laravel framework.",
-  "keywords": [
-    "laravel",
-    "framework"
-  ],
-  "license": "MIT",
-  "require": {
-    "php": "^8.1",
-    "guzzlehttp/guzzle": "^7.2",
-    "knuckleswtf/scribe": "*",
-    "laravel/framework": "^10.10",
-    "laravel/nova": "~4.0",
-    "laravel/sanctum": "^3.3",
-    "laravel/tinker": "^2.8",
-    "outl1ne/nova-settings": "^5.1",
-    "pppcreative/date-picker": "^1.2",
-    "pppcreative/select-badge": "^1.0",
-    "sereny/nova-permissions": "^1.4",
-    "spatie/laravel-permission": "^6.2",
-    "wamesk/laravel-api-response": "^1.1",
-    "wamesk/laravel-auth": "^3.0",
-    "wamesk/laravel-commands": "^1.0"
-  },
-  "require-dev": {
-    "fakerphp/faker": "^1.9.1",
-    "laravel/pint": "^1.0",
-    "laravel/sail": "^1.18",
-    "mockery/mockery": "^1.4.4",
-    "nunomaduro/collision": "^7.0",
-    "phpunit/phpunit": "^10.1",
-    "spatie/laravel-ignition": "^2.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/",
-      "Database\\Factories\\": "database/factories/",
-      "Database\\Seeders\\": "database/seeders/"
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.2",
+        "interaction-design-foundation/nova-html-card": "^3.1",
+        "knuckleswtf/scribe": "*",
+        "laravel/framework": "^10.10",
+        "laravel/nova": "~4.0",
+        "laravel/sanctum": "^3.3",
+        "laravel/tinker": "^2.8",
+        "outl1ne/nova-settings": "^5.1",
+        "pppcreative/date-picker": "^1.2",
+        "pppcreative/select-badge": "^1.0",
+        "sereny/nova-permissions": "^1.4",
+        "spatie/laravel-permission": "^6.2",
+        "wamesk/laravel-api-response": "^1.1",
+        "wamesk/laravel-auth": "^3.0",
+        "wamesk/laravel-commands": "^1.0",
+        "pppcreative/about": "@dev",
+        "pppcreative/json": "@dev"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "laravel/pint": "^1.0",
+        "laravel/sail": "^1.18",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.1",
+        "spatie/laravel-ignition": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "c": [
+            "@php artisan config:clear",
+            "@php artisan optimize:clear"
+        ],
+        "cd": [
+            "composer dump-autoload --classmap-authoritative"
+        ],
+        "mfs": [
+            "php artisan migrate:fresh --seed"
+        ],
+        "imfs": [
+            "composer install",
+            "@php artisan migrate:fresh --seed"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "nova": {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        },
+        "0": {
+            "type": "path",
+            "url": "./nova-components/About"
+        },
+        "1": {
+            "type": "path",
+            "url": "./nova-components/Json"
+        }
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
-  "scripts": {
-    "post-autoload-dump": [
-      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi"
-    ],
-    "post-update-cmd": [
-      "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-    ],
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@php artisan key:generate --ansi"
-    ],
-    "c": [
-      "@php artisan config:clear",
-      "@php artisan optimize:clear"
-    ],
-    "cd": [
-      "composer dump-autoload --classmap-authoritative"
-    ],
-    "mfs": [
-      "php artisan migrate:fresh --seed"
-    ],
-    "imfs": [
-      "composer install",
-      "@php artisan migrate:fresh --seed"
-    ]
-  },
-  "extra": {
-    "laravel": {
-      "dont-discover": []
-    }
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "php-http/discovery": true
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": {
-    "nova": {
-      "type": "composer",
-      "url": "https://nova.laravel.com"
-    }
-  }
 }
