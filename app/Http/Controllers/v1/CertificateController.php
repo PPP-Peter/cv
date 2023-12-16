@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\v1;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ToolResource;
-use App\Models\Tool;
+use App\Http\Resources\CertificateResource;
+use App\Models\Certificate;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -12,12 +12,12 @@ use Wame\ApiResponse\Helpers\ApiResponse;
 use Wame\LaravelCommands\Utils\Validator;
 
 /**
- * @group Tool
+ * @group Certificate
  */
-class ToolController extends Controller
+class CertificateController extends Controller
 {
     /**
-     * GET Tool index
+     * GET Certificate index
      *
      * @bodyParam page int Pagination page Example: 1
      * @bodyParam per_page int Pagination per page Example: 20
@@ -28,7 +28,7 @@ class ToolController extends Controller
     public function index(Request $request): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate($request->all(), [
+            $validator = Validator::code('0')->validate($request->all(), [
                 'page' => 'integer|min:1',
                 'per_page' => 'integer|min:1'
             ]);
@@ -36,16 +36,16 @@ class ToolController extends Controller
 
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
-            $data = Tool::paginate($perPage);
+            $data = Certificate::paginate($perPage);
 
-            return ApiResponse::collection($data, ToolResource::class)->code()->response();
+            return ApiResponse::collection($data, CertificateResource::class)->code('1')->response();
         } catch (\Exception $e) {
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
     /**
-     * POST Tool store
+     * POST Certificate store
      *
      * @param Request $request
      * @return JsonResponse
@@ -53,30 +53,30 @@ class ToolController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate($request->all(), [
+            $validator = Validator::code('0')->validate($request->all(), [
 
             ]);
             if ($validator) return $validator;
 
             DB::beginTransaction();
 
-            $entity = Tool::create([
+            $entity = Certificate::create([
 
             ]);
 
             DB::commit();
 
-            return ApiResponse::data(ToolResource::make($entity))->code()->response(201);
+            return ApiResponse::data(CertificateResource::make($entity))->code('1')->response(201);
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
     /**
-     * GET Tool show
+     * GET Certificate show
      *
-     * @urlParam id ulid required Tool id Example: 01gsa40bvafp2tewxh67bbphw2
+     * @urlParam id ulid required Certificate id Example: 01gsa40bvafp2tewxh67bbphw2
      *
      * @param string $id
      * @return JsonResponse
@@ -84,23 +84,23 @@ class ToolController extends Controller
     public function show(string $id): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate(['id' => $id], [
-                'id' => 'ulid|required|exists:tools,id,deleted_at,NULL',
+            $validator = Validator::code('0')->validate(['id' => $id], [
+                'id' => 'ulid|required|exists:certificates,id,deleted_at,NULL',
             ]);
             if ($validator) return $validator;
 
-            $entity = Tool::find($id);
+            $entity = Certificate::find($id);
 
-            return ApiResponse::data(ToolResource::make($entity))->code()->response();
+            return ApiResponse::data(CertificateResource::make($entity))->code('1')->response();
         } catch (\Exception $e) {
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
     /**
-     * PUT Tool update
+     * PUT Certificate update
      *
-     * @urlParam id ulid required Tool id Example: 01gsa40bvafp2tewxh67bbphw2
+     * @urlParam id ulid required Certificate id Example: 01gsa40bvafp2tewxh67bbphw2
      *
      * @param string $id
      * @param Request $request
@@ -112,12 +112,12 @@ class ToolController extends Controller
             $validate = $request->all();
             $validate['id'] = $id;
 
-            $validator = Validator::code()->validate($validate, [
-                'id' => 'ulid|required|exists:tools,id,deleted_at,NULL',
+            $validator = Validator::code('0')->validate($validate, [
+                'id' => 'ulid|required|exists:certificates,id,deleted_at,NULL',
             ]);
             if ($validator) return $validator;
 
-            $entity = Tool::find($id);
+            $entity = Certificate::find($id);
 
             DB::beginTransaction();
 
@@ -127,17 +127,17 @@ class ToolController extends Controller
 
             DB::commit();
 
-            return ApiResponse::data(ToolResource::make($entity))->code()->response();
+            return ApiResponse::data(CertificateResource::make($entity))->code('1')->response();
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 
     /**
-     * DELETE Tool delete
+     * DELETE Certificate delete
      *
-     * @urlParam id ulid required Tool id Example: 01gsa40bvafp2tewxh67bbphw2
+     * @urlParam id ulid required Certificate id Example: 01gsa40bvafp2tewxh67bbphw2
      *
      * @param string $id
      * @return JsonResponse
@@ -145,22 +145,22 @@ class ToolController extends Controller
     public function delete(string $id): JsonResponse
     {
         try {
-            $validator = Validator::code()->validate(['id' => $id], [
-                'id' => 'ulid|required|exists:tools,id,deleted_at,NULL',
+            $validator = Validator::code('0')->validate(['id' => $id], [
+                'id' => 'ulid|required|exists:certificates,id,deleted_at,NULL',
             ]);
             if ($validator) return $validator;
 
             DB::beginTransaction();
 
-            $entity = Tool::find($id);
+            $entity = Certificate::find($id);
             $entity->delete();
 
             DB::commit();
 
-            return ApiResponse::data(ToolResource::make($entity))->code()->response();
+            return ApiResponse::data(CertificateResource::make($entity))->code('1')->response();
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::code()->message($e->getMessage())->response(500);
+            return ApiResponse::code('9')->message($e->getMessage())->response(500);
         }
     }
 }

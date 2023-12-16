@@ -5,67 +5,85 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Utils\Helpers\TestHelper;
 
 class CertificateTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
+
+    // note: php artisan test --filter CertificateTest::test_index
+
+    private string $model_name = 'certificate';
+    private string $model = \App\Models\Certificate::class;
+
+
+    public function test_index()
     {
-
-        // SETTINGS
-        $user = 'user';                         // exp: rola ktora vytvara poziciu
-        $draft = true;                          // exp: ako draft
-        $videos_seeds = false;                  // exp: aj videa
-
-        /**
-         * Images
-         */
-        $images_path = glob(storage_path('app/testing/photos/*'));  // *.jpg
-        $images_path_count = count(glob(storage_path('app/testing/photos/*')));
-        $random_image = $images_path[rand(0, $images_path_count -1)];
-        // Vytvoríme kópiu
-        $copyPath = storage_path('app/testing/photos/') . random_int(1,9) .  basename($random_image);
-        \Illuminate\Support\Facades\File::copy($random_image, $copyPath);
-        // Upload
-        $uploaded_image = new \Illuminate\Http\UploadedFile($random_image, 'photo.jpg', 'jpg', null, true);
-
-
-        /**
-        * FACTORY
-        */
-        $user_factory = \App\Models\User::factory()->make()->toArray();
-
-        /**
-         * SEND DATA
-         */
-        $user = \App\Utils\Helpers\TestHelper::user($user);
-        $user_data = [
-            'user_id' => $user->id,
-            'about' => 'o mne',
-            'avatar' => $uploaded_image,
-            'prev_position1' => fake()->word(),
-            'prev_position1_duration' => (string) random_int(1,7),
-        ];
-
-        \App\Utils\Helpers\TestHelper::ExportForPostman($user_data);
-
-        /**
-         * POST
-         */
-        $response = $this->actingAs($user, 'api')
-            ->post("api/v1/user", $user_data)   // or $user_factory
+        $response = $this
+            ->get("/api/v1/$this->model_name/index" . '?per_page=' . TestHelper::perPage())
             ->assertStatus(200);
 
+        TestHelper::testDump($response, 'index');
+    }
 
-        /**
-         * RESPONSE
-         */
-        dump($user->id);
-        dump($user->name);
-      
-        \App\Utils\Helpers\TestHelper::testDump($response, 'message');
 
-            }
+    public function test_show()
+    {
+        $response = $this
+            ->get("/api/v1/$this->model_name/" . $this->model::inRandomOrder()->first()->id)
+            ->assertStatus(200);
+
+        TestHelper::testDump($response, 'show');
+    }
+
+
+
+//    public function test_delete()
+//    {
+//        \Illuminate\Support\Facades\DB::beginTransaction();
+//
+//        $response = $this->actingAs(TestHelper::user('user'), 'api')
+//            ->get("/api/v1/$this->model_name/" . $this->model::inRandomOrder()->first()->id)
+//            ->assertStatus(200);
+//
+//        \Illuminate\Support\Facades\DB::rollBack();
+//
+//        TestHelper::testDump($response, 'delete');
+//
+//    }
+
+
+//    public function test_update()
+//    {
+//        $user_factory = $this->model::factory()->make()->toArray();
+//
+//        \App\Utils\Helpers\TestHelper::ExportForPostman($user_factory);
+//
+//        $user_id =  $this->model::inRandomOrder()->first()->id;
+//
+//        $response = $this->actingAs(TestHelper::user('user'), 'api')
+//            ->post("api/v1/$this->model_name/$user_id", $user_factory)
+//            ->assertStatus(201);
+//
+//        TestHelper::testDump($response, 'create');
+//    }
+
+
+
+//    public function test_create()
+//    {
+//        $user_factory = $this->model::factory()->make()->toArray();
+//
+//        \App\Utils\Helpers\TestHelper::ExportForPostman($user_factory);
+//
+//        \Illuminate\Support\Facades\DB::beginTransaction();
+//
+//        $response = $this->actingAs(TestHelper::user('user'), 'api')
+//            ->post("api/v1/$this->model_name/", $user_factory, ['Content-Type' => 'multipart/form-data', 'Accept' => 'application/json',])
+//            ->assertStatus(201);
+//
+//        \Illuminate\Support\Facades\DB::rollBack();
+//
+//        TestHelper::testDump($response, 'create');
+//    }
+
 }
