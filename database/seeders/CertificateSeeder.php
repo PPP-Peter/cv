@@ -25,6 +25,42 @@ class CertificateSeeder extends Seeder
                 'status' => 1,
                 'img' => 'php.jpg',
             ],
+            [
+                'title' => 'SQL',
+                'description' => 'SQL - Skillmea',
+                'status' => 1,
+                'img' => 'sql.jpg',
+            ],
+            [
+                'title' => 'Laravel',
+                'description' => 'OOP a Laravel - Skillmea',
+                'status' => 1,
+                'img' => 'laravel.jpg',
+            ],
+            [
+                'title' => 'OOP',
+                'description' => 'Objektovo orientované programovanie - Skillmea',
+                'status' => 1,
+                'img' => 'oop.jpg',
+            ],
+            [
+                'title' => 'Wordpress',
+                'description' => 'Wordpress pre programátora: Témy - Skillmea',
+                'status' => 1,
+                'img' => 'wrdpress1.jpg',
+            ],
+            [
+                'title' => 'Wordpress',
+                'description' => 'Wordpress pre programátora: Pluginy - Skillmea',
+                'status' => 1,
+                'img' => 'wrdpress2.jpg',
+            ],
+            [
+                'title' => 'SEO',
+                'description' => 'Pokročilé SEO stratégie - Skillmea',
+                'status' => 1,
+                'img' => 'seo.jpg',
+            ],
         ];
 
         foreach ($certificates as $certificate) {

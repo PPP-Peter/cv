@@ -3,14 +3,12 @@
 namespace App\Providers;
 
 
-
 use App\Providers\Nova\Footer;
 use App\Providers\Nova\MainMenu;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
-use Wame\Todo\Todo;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -25,7 +23,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         MainMenu::make();
         Footer::make();
         Nova::style('app', resource_path('css/app.css'));
-       // Nova::withoutNotificationCenter();
+        Nova::withoutNotificationCenter();
+
+        Nova::script('admin', resource_path('js/admin.js'));
+//        Nova::withoutThemeSwitcher(); // this method disables the theme switcher
 
 //        Nova::serving(function () {
 //            $pathToFile = resource_path('lang/vendor/nova/sk/components.json');

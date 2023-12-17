@@ -10,6 +10,7 @@ return [
     'name' => 'Meno',
     'from' => 'Od',
     'to' => 'Do',
+    'priority' => 'Priorita',
     'number' => 'Číslo',
     'date' => 'Dátum',
     'status' => 'Status',

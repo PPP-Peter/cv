@@ -26,7 +26,8 @@
         "spatie/laravel-medialibrary": "^10.0.0",
         "spatie/laravel-permission": "^6.2",
         "wamesk/laravel-api-response": "^1.1",
-        "wamesk/laravel-commands": "^1.0"
+        "wamesk/laravel-commands": "^1.0",
+        "pppcreative/chart": "@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -106,6 +107,10 @@
         "1": {
             "type": "path",
             "url": "./nova-components/Json"
+        },
+        "2": {
+            "type": "path",
+            "url": "./nova-components/Chart"
         }
     }
 }

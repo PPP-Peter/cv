@@ -9,7 +9,9 @@
         "build-tabs": "cd nova-components/Tabs && npm run dev",
         "build-tabs-prod": "cd nova-components/Tabs && npm run prod",
         "build-json": "cd nova-components/Json && npm run dev",
-        "build-json-prod": "cd nova-components/Json && npm run prod"
+        "build-json-prod": "cd nova-components/Json && npm run prod",
+        "build-chart": "cd nova-components/Chart && npm run dev",
+        "build-chart-prod": "cd nova-components/Chart && npm run prod"
     },
     "devDependencies": {
         "axios": "^1.6.1",

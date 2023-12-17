@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
             ->assignRole('user');
 
         // guest
-        $frontak = $this->getUpdateOrCreate('guest@guest.sk', 'Guest', Hash::make('testuser'), null)
+        $guest = $this->getUpdateOrCreate('guest@guest.sk', 'Guest', Hash::make('testuser'), null)
             ->assignRole('user');
 
         // managers

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2ef5fa43101c3daba2aca1c44ae42c7",
+    "content-hash": "d25df271983e028bb8866d3f934b2a94",
     "packages": [
         {
             "name": "brick/math",
@@ -4288,6 +4288,42 @@
             "autoload": {
                 "psr-4": {
                     "Pppcreative\\About\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "pppcreative/chart",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Chart",
+                "reference": "350dc1fa3efc0b5fea26ddf11fb6e6bcb07a997f"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pppcreative\\Chart\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pppcreative\\Chart\\": "src/"
                 }
             },
             "license": [
@@ -11101,7 +11137,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pppcreative/about": 20,
-        "pppcreative/json": 20
+        "pppcreative/json": 20,
+        "pppcreative/chart": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -13,7 +13,7 @@ use Spatie\Permission\Traits\HasPermissions;
 use Spatie\Permission\Traits\HasRoles;
 use Wame\LaravelAuth\Models\BaseUser;
 
-class User extends BaseUser
+class User extends Authenticatable
 {
     use HasFactory, Notifiable;
     use HasUlids, SoftDeletes, HasRoles, HasPermissions;

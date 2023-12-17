@@ -8,6 +8,7 @@ use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Dashboards\Main as Dashboard;
 use Pppcreative\About\About;
+use Pppcreative\Chart\Chart;
 use Pppcreative\Json\Json;
 use Wame\DatePicker\DatePicker;
 
@@ -21,7 +22,8 @@ class Main extends Dashboard
     public function cards()
     {
         return [
-            (new About())->width('full'),
+            (new About())->width('1/2'),
+            (new Chart())->width('1/2'),
 
             (new HtmlCard())->width('1/4')->html(
                 '<div style="margin:auto">
