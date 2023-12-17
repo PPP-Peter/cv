@@ -24,13 +24,13 @@ class RolesAndPermissionsSeeder extends Seeder
         $full = array_merge($medium, ['forceDelete', 'restore']);
 
         $permissionList = [
-            'User' =>       ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $small],
+            'User' =>       ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
             'Role' =>       ['super-admin' => $full, 'admin' => $full, 'manager' => $denied, 'user' => $denied],
             'Permission' => ['super-admin' => $full, 'admin' => $denied, 'manager' => $denied, 'user' => $denied],
-            'Certificate' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
-            'Skill' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
-            'Tool' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
-            'Job' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $denied],
+            'Certificate' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $tiny],
+            'Skill' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $tiny],
+            'Tool' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $tiny],
+            'Job' => ['super-admin' => $full, 'admin' => $full, 'manager' => $medium, 'user' => $tiny],
         ];
 
         $permissions = [

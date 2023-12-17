@@ -44,16 +44,16 @@ class CertificateSeeder extends Seeder
                 'img' => 'oop.jpg',
             ],
             [
-                'title' => 'Wordpress',
+                'title' => 'Wordpress pre programátora: Témy',
                 'description' => 'Wordpress pre programátora: Témy - Skillmea',
                 'status' => 1,
-                'img' => 'wrdpress1.jpg',
+                'img' => 'wordpress.jpg',
             ],
             [
-                'title' => 'Wordpress',
-                'description' => 'Wordpress pre programátora: Pluginy - Skillmea',
+                'title' => 'Wordpress pre programátora: Pluginy',
+                'description' => 'Wordpress pre programátora: Pluginy a rýchlosť webu- Skillmea',
                 'status' => 1,
-                'img' => 'wrdpress2.jpg',
+                'img' => 'wordpress2.jpg',
             ],
             [
                 'title' => 'SEO',

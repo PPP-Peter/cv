@@ -6,9 +6,11 @@ use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
+use Illuminate\Database\Eloquent\Builder;
 use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -28,7 +30,7 @@ class Tool extends BaseResource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -36,8 +38,24 @@ class Tool extends BaseResource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title',
     ];
+
+    const DEFAULT_INDEX_ORDER = 'priority';
+    public static function indexQuery(NovaRequest $request, $query): \Illuminate\Database\Eloquent\Builder
+    {
+        $query->when(empty($request->get('orderBy')), function(Builder $q) {
+            $q->getQuery()->orders = [];
+
+            return $q->orderBy(static::DEFAULT_INDEX_ORDER);
+        });
+     return $query->orderBy(static::DEFAULT_INDEX_ORDER, 'asc');
+    }
+
+    public static function relatableQuery(NovaRequest $request, $query)
+    {
+        return $query->orderBy('priority', 'desc');
+    }
 
     /**
      * Get the fields displayed by the resource.
@@ -51,10 +69,10 @@ class Tool extends BaseResource
             Tabs::make(__('tool.detail', ['title' => $this->title]), [
                 Tab::make(__('tool.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make(__('fields.title'), 'title'),
-                    Text::make(__('fields.description'), 'description'),
-                    Number::make(__('priority'), 'priority'),
-                    Number::make(__('fields.status'), 'status'),
+                    Text::make(__('fields.title'), 'title')->sortable(),
+                    Text::make(__('fields.description'), 'description')->sortable(),
+                    Number::make(__('fields.priority'), 'priority')->sortable(),
+                    Status::make(__('fields.status'), 'status')->loadingWhen([0])->failedWhen([3])->sortable(),
                     Images::make(__('fields.image'), 'tool_image'),
                 ]),
             ])->withToolbar(),

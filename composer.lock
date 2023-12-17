@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d25df271983e028bb8866d3f934b2a94",
+    "content-hash": "ae5cae3771839e8d2816fb663969dce3",
     "packages": [
         {
             "name": "brick/math",
@@ -3231,6 +3231,54 @@
                 }
             ],
             "time": "2023-06-21T14:59:35+00:00"
+        },
+        {
+            "name": "masoudi/nova-progress-field",
+            "version": "0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rezamasoudi/nova-progress-field.git",
+                "reference": "f2ff32a6f82a0a68605c4b0d456c506b15f13d36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rezamasoudi/nova-progress-field/zipball/f2ff32a6f82a0a68605c4b0d456c506b15f13d36",
+                "reference": "f2ff32a6f82a0a68605c4b0d456c506b15f13d36",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Masoudi\\Nova\\Fields\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masoudi\\Nova\\Fields\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel Nova progress bar field",
+            "keywords": [
+                "laravel",
+                "masoudi",
+                "nova",
+                "progressbar"
+            ],
+            "support": {
+                "issues": "https://github.com/rezamasoudi/nova-progress-field/issues",
+                "source": "https://github.com/rezamasoudi/nova-progress-field/tree/0.3"
+            },
+            "abandoned": true,
+            "time": "2022-08-26T12:30:45+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -11137,8 +11185,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pppcreative/about": 20,
-        "pppcreative/json": 20,
-        "pppcreative/chart": 20
+        "pppcreative/chart": 20,
+        "pppcreative/json": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

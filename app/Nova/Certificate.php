@@ -8,6 +8,7 @@ use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -28,7 +29,7 @@ class Certificate extends BaseResource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -36,7 +37,7 @@ class Certificate extends BaseResource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title',
     ];
 
     /**
@@ -51,9 +52,11 @@ class Certificate extends BaseResource
             Tabs::make(__('certificate.detail', ['title' => $this->title]), [
                 Tab::make(__('certificate.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make(__('fields.title'), 'title'),
-                    Text::make(__('fields.description'), 'description'),
-                    Number::make(__('fields.status'), 'status'),
+                    Text::make(__('fields.title'), 'title')->sortable(),
+                    Text::make(__('fields.description'), 'description')->sortable(),
+                    Status::make(__('fields.status'), 'status')
+                        ->loadingWhen([0])->failedWhen([3])
+                        ->sortable(),
                     Images::make(__('fields.image'), 'certificate_image'),
                 ]),
             ])->withToolbar(),

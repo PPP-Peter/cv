@@ -17,8 +17,10 @@
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
+        "masoudi/nova-progress-field": "^0.3.0",
         "outl1ne/nova-settings": "^5.1",
         "pppcreative/about": "@dev",
+        "pppcreative/chart": "@dev",
         "pppcreative/date-picker": "^1.2",
         "pppcreative/json": "@dev",
         "pppcreative/select-badge": "^1.0",
@@ -26,8 +28,7 @@
         "spatie/laravel-medialibrary": "^10.0.0",
         "spatie/laravel-permission": "^6.2",
         "wamesk/laravel-api-response": "^1.1",
-        "wamesk/laravel-commands": "^1.0",
-        "pppcreative/chart": "@dev"
+        "wamesk/laravel-commands": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

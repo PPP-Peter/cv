@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Job extends BaseResource
@@ -28,7 +29,7 @@ class Job extends BaseResource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -36,7 +37,7 @@ class Job extends BaseResource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title', 'company', 'description'
     ];
 
     /**
@@ -51,11 +52,11 @@ class Job extends BaseResource
             Tabs::make(__('job.detail', ['title' => $this->title]), [
                 Tab::make(__('job.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make(__('fields.title'), 'title'),
-                    Text::make(__('fields.company'), 'company'),
-                    Text::make(__('fields.description'), 'description'),
-                    Date::make(__('fields.from'), 'from'),
-                    Date::make(__('fields.to'), 'to'),
+                    Text::make(__('fields.title'), 'title')->sortable(),
+                    Text::make(__('fields.company'), 'company')->sortable(),
+                    Textarea::make(__('fields.description'), 'description')->alwaysShow(),
+                    Date::make(__('fields.from'), 'from')->sortable(),
+                    Date::make(__('fields.to'), 'to')->sortable(),
                 ]),
             ])->withToolbar(),
         ];

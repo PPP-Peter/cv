@@ -24,7 +24,8 @@ class MainMenu
                 MenuSection::dashboard('\App\Nova\Dashboards\Main')->icon('view-grid'),
 
                 MenuSection::make(__('fields.menu.users'), [
-                    MenuItem::resource('\App\Nova\User'),
+                    MenuItem::resource('\App\Nova\User')
+                        ->canSee(function ($request) {return $request->user()->isAnyAdmin();}),
                 ])->collapsable()->collapsible()->icon('user'),
 
                 MenuSection::make(__('fields.menu.certificates'), [

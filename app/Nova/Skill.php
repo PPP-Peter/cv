@@ -8,8 +8,11 @@ use Eminiarts\Tabs\Traits\HasTabs;
 use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Sparkline;
+use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Masoudi\Nova\Fields\Progress;
 
 class Skill extends BaseResource
 {
@@ -27,7 +30,7 @@ class Skill extends BaseResource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -35,7 +38,7 @@ class Skill extends BaseResource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title',
     ];
 
     /**
@@ -50,10 +53,23 @@ class Skill extends BaseResource
             Tabs::make(__('skill.detail', ['title' => $this->title]), [
                 Tab::make(__('skill.singular'), [
                     ID::make()->onlyOnForms(),
-                    Text::make(__('fields.title'), 'title'),
-                    Text::make(__('fields.description'), 'description'),
-                    Number::make(__('fields.progress'), 'progress'),
-                    Number::make(__('fields.status'), 'status'),
+                    Text::make(__('fields.title'), 'title')->sortable(),
+                    Text::make(__('fields.description'), 'description')->sortable(),
+
+                    Number::make(__('fields.progress'), 'progress')
+                        ->hide()->hideFromIndex()->hideFromDetail()->hideWhenUpdating()->hideWhenCreating()
+                        ->filterable(),
+
+                    Progress::make(__('fields.progress'), 'progress')
+                        ->sortable()
+                        ->min(0) // default: 0
+                        ->max(100) // default: 100
+                        ->step(1) // default: 1
+                        ->default(70) // deafult number value
+                        ->displayUsing(fn ($progress) => "$progress%"), // change display text: 25%
+
+                    Status::make(__('fields.status'), 'status')->loadingWhen([0])->failedWhen([3])
+                        ->sortable(),
                 ]),
             ])->withToolbar(),
         ];

@@ -57,11 +57,25 @@ class ToolSeeder extends Seeder
                 'img' => 'postman.png',
             ],
             [
+                'title' => 'Cmder',
+                'description' => 'Pre prácu s konzolou / príkazový terminál',
+                'status' => 1,
+                'priority' => 7,
+                'img' => 'cmder.png',
+            ],
+            [
                 'title' => 'Chat GPT',
                 'description' => 'Užitočný pomocník pri písaní kódu',
                 'status' => 1,
-                'priority' => 7,
+                'priority' => 8,
                 'img' => 'chatgpt.png',
+            ],
+            [
+                'title' => 'Photoshop',
+                'description' => 'Pre úpravu a tvorbu grafiky',
+                'status' => 1,
+                'priority' => 9,
+                'img' => 'photoshop.png',
             ],
         ];
 
