@@ -5,6 +5,7 @@ namespace App\Nova;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
+use Illuminate\Database\Eloquent\Builder;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
@@ -39,6 +40,17 @@ class Job extends BaseResource
     public static $search = [
         'id', 'title', 'company', 'description'
     ];
+
+    const DEFAULT_INDEX_ORDER = 'from';
+    public static function indexQuery(NovaRequest $request, $query): \Illuminate\Database\Eloquent\Builder
+    {
+        $query->when(empty($request->get('orderBy')), function(Builder $q) {
+            $q->getQuery()->orders = [];
+
+            return $q->orderBy(static::DEFAULT_INDEX_ORDER, 'desc');
+        });
+        return $query->orderBy(static::DEFAULT_INDEX_ORDER, 'desc');
+    }
 
     /**
      * Get the fields displayed by the resource.

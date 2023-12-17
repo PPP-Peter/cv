@@ -27,6 +27,7 @@
         "sereny/nova-permissions": "^1.4",
         "spatie/laravel-medialibrary": "^10.0.0",
         "spatie/laravel-permission": "^6.2",
+        "symfony/filesystem": "^7.0",
         "wamesk/laravel-api-response": "^1.1",
         "wamesk/laravel-commands": "^1.0"
     },
