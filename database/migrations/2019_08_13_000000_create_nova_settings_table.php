@@ -15,10 +15,10 @@ return new class extends Migration
     public function up()
     {
         // Settings table
-        Schema::create(NovaSettings::getSettingsTableName(), function (Blueprint $table) {
-            $table->string('key')->unique()->primary();
-            $table->text('value')->nullable();
-        });
+//        Schema::create(NovaSettings::getSettingsTableName(), function (Blueprint $table) {
+//            $table->string('key')->unique()->primary();
+//            $table->text('value')->nullable();
+//        });
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(NovaSettings::getSettingsTableName());
+//        Schema::dropIfExists(NovaSettings::getSettingsTableName());
     }
 };

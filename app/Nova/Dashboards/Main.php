@@ -3,7 +3,7 @@
 namespace App\Nova\Dashboards;
 
 use App\Nova\Metrics\AllUserPerDay;
-use App\Nova\Metrics\EditorsPerDay;
+use App\Nova\Metrics\ManagerssPerDay;
 use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Dashboards\Main as Dashboard;

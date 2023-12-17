@@ -7,7 +7,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\Trend;
 use Laravel\Nova\Nova;
 
-class EditorsPerDay extends Trend
+class ManagerssPerDay extends Trend
 {
     /**
      * Calculate the value of the metric.
