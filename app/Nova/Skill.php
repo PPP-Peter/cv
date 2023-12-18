@@ -8,11 +8,13 @@ use Eminiarts\Tabs\Traits\HasTabs;
 use InteractionDesignFoundation\HtmlCard\HtmlCard;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Sparkline;
 use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Masoudi\Nova\Fields\Progress;
+use Wame\IndexToggle\IndexToggle;
 
 class Skill extends BaseResource
 {
@@ -68,8 +70,14 @@ class Skill extends BaseResource
                         ->default(70) // deafult number value
                         ->displayUsing(fn ($progress) => "$progress%"), // change display text: 25%
 
-                    Status::make(__('fields.status'), 'status')->loadingWhen([0])->failedWhen([3])
-                        ->sortable(),
+                    Select::make('Status', 'status')
+                        ->options([0 => 'Draft', 1 => 'Show',])
+                        ->displayUsingLabels()->hideFromIndex()->hideFromDetail(),
+
+                    IndexToggle::make(__('fields.status'), 'status')->flash('aktualizovaný')
+                        ->textAlign('right')
+                        ->hideWhenCreating()
+                        ->hideWhenUpdating(),
                 ]),
             ])->withToolbar(),
         ];

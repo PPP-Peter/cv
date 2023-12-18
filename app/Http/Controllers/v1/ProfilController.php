@@ -41,9 +41,9 @@ class ProfilController extends Controller
             $data = [
                 [
                     'jobs' => Job::all()->pluck('title'),
-                    'favorite_tools' => Tool::all()->pluck('title'),
+                    'favorite_tools' => Tool::where('status', 1)->pluck('title'),
                     'certificates' => Certificate::all()->pluck('title'),
-                    'skills' => Skill::select('title', 'description')->get(),
+                    'skills' => Skill::where('status', 1)->select('title', 'description')->get(),
                 ]
             ];
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "765d70c79d5bb37323c301ebe0d55a0b",
+    "content-hash": "04bf9ef3e0e677ed630d32c900255fa3",
     "packages": [
         {
             "name": "brick/math",
@@ -9014,6 +9014,96 @@
                 "source": "https://github.com/wamesk/laravel-commands/tree/1.1.1"
             },
             "time": "2023-11-20T09:19:03+00:00"
+        },
+        {
+            "name": "wamesk/laravel-nova-boolean-field",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wamesk/laravel-nova-boolean-field.git",
+                "reference": "13b64d7382cf5c14ba4bbf3ebf3da04b3fc094cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wamesk/laravel-nova-boolean-field/zipball/13b64d7382cf5c14ba4bbf3ebf3da04b3fc094cc",
+                "reference": "13b64d7382cf5c14ba4bbf3ebf3da04b3fc094cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wame\\IndexToggle\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wame\\IndexToggle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/wamesk/laravel-nova-boolean-field/issues",
+                "source": "https://github.com/wamesk/laravel-nova-boolean-field/tree/0.0.1"
+            },
+            "time": "2023-04-12T10:01:12+00:00"
+        },
+        {
+            "name": "wamesk/laravel-nova-tel-input",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wamesk/laravel-nova-tel-input.git",
+                "reference": "11c8fd8888fec15a5a1dafe5389a3e728cbc2e6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wamesk/laravel-nova-tel-input/zipball/11c8fd8888fec15a5a1dafe5389a3e728cbc2e6b",
+                "reference": "11c8fd8888fec15a5a1dafe5389a3e728cbc2e6b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wame\\TelInput\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wame\\TelInput\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/wamesk/laravel-nova-tel-input/issues",
+                "source": "https://github.com/wamesk/laravel-nova-tel-input/tree/1.0.0"
+            },
+            "time": "2023-03-13T14:36:34+00:00"
         },
         {
             "name": "wamesk/utils",

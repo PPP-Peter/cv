@@ -51,6 +51,9 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\v1'], funct
         Route::get('/{slug}', 'ProfilController@show')->name('profilShow');
     });
 
+    // SETTINGS
+    Route::get('/settings', 'SettingController@index')->name('settings');
+
 });
 
 

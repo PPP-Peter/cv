@@ -11,6 +11,11 @@ use Pppcreative\Json\Json;
 
 class Main extends Dashboard
 {
+
+    public function name(){
+        return __('Dashboard');
+    }
+
     /**
      * Get the cards for the dashboard.
      *

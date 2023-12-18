@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/endpoint', function (Request $request) {
-//     //
-// });
+Route::get('settings', [\App\Http\Controllers\v1\SettingController::class, 'index']);

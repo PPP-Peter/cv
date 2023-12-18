@@ -36,7 +36,8 @@ class ToolController extends Controller
 
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
-            $data = Tool::where('status', 1)->select('title', 'description')->paginate($perPage);
+            $data = Tool::where('status', 1)->orderBy('priority')->select('title', 'description')->paginate($perPage);
+            $data->appends(['per_page'=> $perPage]);
 
             return ApiResponse::collection($data, ToolResource::class)->code('1')->response();
         } catch (\Exception $e) {

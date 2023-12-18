@@ -8,8 +8,10 @@ use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
 use Illuminate\Database\Eloquent\Builder;
 use InteractionDesignFoundation\HtmlCard\HtmlCard;
+use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -69,10 +71,29 @@ class Tool extends BaseResource
             Tabs::make(__('tool.detail', ['title' => $this->title]), [
                 Tab::make(__('tool.singular'), [
                     ID::make()->onlyOnForms(),
+
                     Text::make(__('fields.title'), 'title')->sortable(),
+
                     Text::make(__('fields.description'), 'description')->sortable(),
+
                     Number::make(__('fields.priority'), 'priority')->sortable(),
-                    Status::make(__('fields.status'), 'status')->loadingWhen([0])->failedWhen([3])->sortable(),
+
+                    Select::make('Status', 'status')->options([
+                        0 => 'Draft',
+                        1 => 'Show',
+                        2 => 'Denied',
+                    ])->displayUsingLabels()->hideFromIndex(),
+
+                    Badge::make('Status')->map([
+                        0 => 'info',
+                        1 => 'success',
+                        2 => 'danger',
+                    ])->labels([
+                        0 => 'Draft',
+                        1 => 'Show',
+                        2 => 'Denied',
+                    ])->withIcons(),
+
                     Images::make(__('fields.image'), 'tool_image'),
                 ]),
             ])->withToolbar(),

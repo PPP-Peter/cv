@@ -43,10 +43,13 @@ return [
     'export_all' => 'Exportovať všetko',
     'export_csv' => 'Exportovať ako CSV',
 
+
     "menu.documents" => "Dokumenty",
     "menu.users" => "Užívatelia",
     "menu.certificates" => "Certifikáty",
     "menu.skills" => "Schopnosti",
     "menu.tools" => "Nástroje",
-    "menu.jobs" => "Pozície"
+    "menu.jobs" => "Pozície",
+    "menu.roles" => "Roly a povolenia",
+    "menu.settings" => "Nastavenia"
 ];

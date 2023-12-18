@@ -14,12 +14,12 @@ return new class extends Migration
      */
     public function up()
     {
-//        // TODO Remove in next major release
-//        // Legacy support
-//        // Convert value column to text if needed as the 'value' column was previously a varchar
-//        Schema::table(NovaSettings::getSettingsTableName(), function (Blueprint $table) {
-//            $table->text('value')->nullable()->change();
-//        });
+        // TODO Remove in next major release
+        // Legacy support
+        // Convert value column to text if needed as the 'value' column was previously a varchar
+        Schema::table(NovaSettings::getSettingsTableName(), function (Blueprint $table) {
+            $table->text('value')->nullable()->change();
+        });
     }
 
     /**

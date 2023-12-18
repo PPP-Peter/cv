@@ -36,7 +36,8 @@ class CertificateController extends Controller
 
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
-            $data = Certificate::paginate($perPage);
+            $data = Certificate::where('status', 1)->paginate($perPage);
+            $data->appends(['per_page'=> $perPage]);
 
             return ApiResponse::collection($data, CertificateResource::class)->code('1')->response();
         } catch (\Exception $e) {

@@ -23,6 +23,26 @@ class MainMenu
             return [
                 MenuSection::dashboard('\App\Nova\Dashboards\Main')->icon('view-grid'),
 
+                MenuSection::resource('\App\Nova\Job')->icon('briefcase'),
+
+                MenuSection::resource('\App\Nova\Skill')->icon('book-open'),
+
+                MenuSection::resource('\App\Nova\Tool')->icon('puzzle'),
+
+                MenuSection::resource('\App\Nova\Certificate')->icon('clipboard-list'),
+
+                MenuSection::make(__('fields.menu.roles'), [
+                    MenuItem::resource('\Sereny\NovaPermissions\Nova\Permission'),
+                    MenuItem::resource('\Sereny\NovaPermissions\Nova\Role'),
+                ])->collapsable()->collapsible()->icon('shield-check'),
+                //->canSee(fn ($request) => $request->user()->isAnyAdmin())
+
+                MenuSection::make(__('fields.menu.settings'), [
+                    $menu->items[3]->items[0] ,
+                ])->collapsable()->collapsible()->icon('cog')
+
+
+/*
                 MenuSection::make(__('fields.menu.users'), [
                     MenuItem::resource('\App\Nova\User')
                         ->canSee(function ($request) {return $request->user()->isAnyAdmin();}),
@@ -43,7 +63,7 @@ class MainMenu
                 MenuSection::make(__('fields.menu.jobs'), [
                     MenuItem::resource('\App\Nova\Job'),
                 ])->collapsable()->collapsible()->icon('briefcase'),
-
+*/
 
             ];
 

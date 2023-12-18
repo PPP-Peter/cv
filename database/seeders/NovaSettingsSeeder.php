@@ -17,12 +17,16 @@ class NovaSettingsSeeder extends Seeder
         $values = [
             // vseobecne
             [
-                'key' => 'general_email',
-                'value' => '1plus1@test.sk'
+                'key' => 'address',
+                'value' => 'Hervartov 68'
             ],
             [
-                'key' => 'company',
-                'value' => '1plus1',
+                'key' => 'phone',
+                'value' => '+421948098889',
+            ],
+            [
+                'key' => 'email',
+                'value' => 'p.petermanik@gmail.com',
             ],
 
         ];

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->string('title');
             $table->text('description');
-            $table->tinyInteger('status');
+            $table->boolean('status');
             $table->unsignedSmallInteger('progress');
             $table->datetimes();
             $table->softDeletesDatetime();

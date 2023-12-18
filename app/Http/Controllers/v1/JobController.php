@@ -37,6 +37,7 @@ class JobController extends Controller
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
             $data = Job::select('title', 'description', 'company', 'from', 'to')->paginate($perPage);
+            $data->appends(['per_page'=> $perPage]);
 
             return ApiResponse::collection($data, JobResource::class)->code('1')->response();
         } catch (\Exception $e) {
