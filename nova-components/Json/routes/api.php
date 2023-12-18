@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('profil', [\App\Http\Controllers\v1\ProfilController::class, 'index']);
 Route::get('skills', [\App\Http\Controllers\v1\SkillController::class, 'index']);
+Route::get('jobs', [\App\Http\Controllers\v1\JobController::class, 'index']);

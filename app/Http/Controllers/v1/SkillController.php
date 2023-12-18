@@ -36,7 +36,7 @@ class SkillController extends Controller
 
             $perPage = $request->get('per_page', config('wame-commands.per_page', 20));
 
-            $data = Skill::select('title', 'description', 'progress', 'status')->paginate($perPage);
+            $data = Skill::where('status', 1)->select('title', 'description', 'progress')->paginate($perPage);
 
             return ApiResponse::collection($data, SkillResource::class)->code('1')->response();
         } catch (\Exception $e) {

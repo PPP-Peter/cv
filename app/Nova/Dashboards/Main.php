@@ -2,15 +2,12 @@
 
 namespace App\Nova\Dashboards;
 
-use App\Nova\Metrics\AllUserPerDay;
-use App\Nova\Metrics\ManagerssPerDay;
+
 use InteractionDesignFoundation\HtmlCard\HtmlCard;
-use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Dashboards\Main as Dashboard;
 use Pppcreative\About\About;
 use Pppcreative\Chart\Chart;
 use Pppcreative\Json\Json;
-use Wame\DatePicker\DatePicker;
 
 class Main extends Dashboard
 {
@@ -27,7 +24,7 @@ class Main extends Dashboard
 
             (new HtmlCard())->width('1/4')->html(
                 '<div style="margin:auto">
-                                <a href="/resources/jobs" style="text-align: center" class="h-2 text-lg"><h1>Jobs</h1>
+                                <a href="/resources/jobs" style="text-align: center" class="h-2 text-lg"><h1>Práce</h1>
                                      <div style="width: 85px; margin:auto">
                                           <img src="/storage/img/job.png">
                                     </div>
@@ -45,7 +42,7 @@ class Main extends Dashboard
             ),
             (new HtmlCard())->width('1/4')->html(
                 '<div style="margin:auto">
-                                <a href="/resources/skills" style="text-align: center" class="h-2 text-lg"><h1>Skills</h1>
+                                <a href="/resources/skills" style="text-align: center" class="h-2 text-lg"><h1>Schopnosti</h1>
                                      <div style="width: 85px; padding-top:10px; margin:auto">
                                         <img src="/storage/img/skill.png">
                                     </div>

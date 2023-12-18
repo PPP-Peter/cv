@@ -14,6 +14,12 @@ class JobResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'title' => $this->title,
+            'company' => $this->company,
+            'description' => $this->description,
+            'from' => ($this->from)->format('Y-m'),
+            'to' => ($this->to)->format('Y-m'),
+        ];
     }
 }
