@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "fabda4dc-f9d8-40be-818d-1236f5449cf2",
+        "_postman_id": "369b21ed-373e-47d4-9a54-151f8e797337",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -65,7 +65,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "44"
+                                    "value": "53"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -73,7 +73,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":\"01hhskp6g71sm9v6r6tgg96drs\",\"title\":\"JavaScript\",\"description\":\"JavaScript a ES6 - Skillmea\",\"status\":1,\"created_at\":\"2023-12-16T15:25:02.000000Z\",\"updated_at\":\"2023-12-16T15:25:02.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskp7eh7bzg0nxam52jepz9\",\"title\":\"PHP\",\"description\":\"PHP - Skillmea\",\"status\":1,\"created_at\":\"2023-12-16T15:25:03.000000Z\",\"updated_at\":\"2023-12-16T15:25:03.000000Z\",\"deleted_at\":null}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index?page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index\",\"per_page\":20,\"to\":2,\"total\":2},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":[{\"id\":\"01hhz3xs9b704zepc25tss028q\",\"title\":\"JavaScript\",\"description\":\"JavaScript a ES6 - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:00.000000Z\",\"updated_at\":\"2023-12-18T18:45:00.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xsyhddkzsqbxxy1vsj47\",\"title\":\"PHP\",\"description\":\"PHP - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:01.000000Z\",\"updated_at\":\"2023-12-18T18:45:01.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xtf84t87egsg649rchcg\",\"title\":\"SQL\",\"description\":\"SQL - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:01.000000Z\",\"updated_at\":\"2023-12-18T18:45:01.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xtva40c0vjre9jj4rhy2\",\"title\":\"Laravel\",\"description\":\"OOP a Laravel - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:01.000000Z\",\"updated_at\":\"2023-12-18T18:45:01.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xv6tdx38hva2jcrphf19\",\"title\":\"OOP\",\"description\":\"Objektovo orientovan\\u00e9 programovanie - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:02.000000Z\",\"updated_at\":\"2023-12-18T18:45:02.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xvhs74tpszhdbf31zc8k\",\"title\":\"Wordpress pre program\\u00e1tora: T\\u00e9my\",\"description\":\"Wordpress pre program\\u00e1tora: T\\u00e9my - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:02.000000Z\",\"updated_at\":\"2023-12-18T18:45:02.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xvwwab310x1w0s75k5sb\",\"title\":\"Wordpress pre program\\u00e1tora: Pluginy\",\"description\":\"Wordpress pre program\\u00e1tora: Pluginy a r\\u00fdchlos\\u0165 webu- Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:03.000000Z\",\"updated_at\":\"2023-12-18T18:45:03.000000Z\",\"deleted_at\":null},{\"id\":\"01hhz3xwax72bwzmvmz3yyp7p1\",\"title\":\"SEO\",\"description\":\"Pokro\\u010dil\\u00e9 SEO strat\\u00e9gie - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:03.000000Z\",\"updated_at\":\"2023-12-18T18:45:03.000000Z\",\"deleted_at\":null}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index?per_page=20&page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index?per_page=20&page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index?per_page=20&page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/certificate\\\/index\",\"per_page\":20,\"to\":8,\"total\":8},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -90,7 +90,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "01hhskp6g71sm9v6r6tgg96drs",
+                                    "value": "01hhz3xs9b704zepc25tss028q",
                                     "description": "The slug of the certificate."
                                 },
                                 {
@@ -135,7 +135,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "43"
+                                    "value": "52"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -143,7 +143,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":\"01hhskp6g71sm9v6r6tgg96drs\",\"title\":\"JavaScript\",\"description\":\"JavaScript a ES6 - Skillmea\",\"status\":1,\"created_at\":\"2023-12-16T15:25:02.000000Z\",\"updated_at\":\"2023-12-16T15:25:02.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":{\"id\":\"01hhz3xs9b704zepc25tss028q\",\"title\":\"JavaScript\",\"description\":\"JavaScript a ES6 - Skillmea\",\"status\":1,\"created_at\":\"2023-12-18T18:45:00.000000Z\",\"updated_at\":\"2023-12-18T18:45:00.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -200,7 +200,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "46"
+                                    "value": "55"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -208,7 +208,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"Backend Developer\",\"description\":\"Laravel a Laravel nova\",\"company\":\"WAME\",\"from\":\"2021-12-31T23:00:00.000000Z\",\"to\":\"2022-12-31T23:00:00.000000Z\"},{\"title\":\"Wordpres program\\u00e1tor\",\"description\":\"Wordpres str\\u00e1nky a Woocomerce eshopy\",\"company\":\"B-commerce\",\"from\":\"2021-12-31T23:00:00.000000Z\",\"to\":\"2020-12-31T23:00:00.000000Z\"}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index?page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index\",\"per_page\":20,\"to\":2,\"total\":2},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":[{\"title\":\"Backend Developer\",\"company\":\"WAME s.r.o.\",\"description\":\"Tvorba backendu pre mobiln\\u00e9 a webov\\u00e9 aplik\\u00e1cie v laraveli, pr\\u00edprava api pre frontend, kompletn\\u00e9 administra\\u010dn\\u00e9 rozhranie v Laravel Nova a Vue.js\",\"from\":\"2022-01\",\"to\":\"2023-12\"},{\"title\":\"Fullstack \\\/ Wordpress developer\",\"company\":\"B-commerce s.r.o.\",\"description\":\"Kompletn\\u00e1 spr\\u00e1va, tvorba, \\u00faprava a optimaliz\\u00e1cia e-shopov a str\\u00e1nok postaven\\u00fdch na Wordpresse, v\\u00fdvoj vlastn\\u00fdch pluginov a funkci\\u00ed, \\u00faprava CSS,  implement\\u00e1cia extern\\u00fdch rie\\u0161en\\u00ed.\",\"from\":\"2020-10\",\"to\":\"2021-12\"},{\"title\":\"Office manager\",\"company\":\"Landberg s.r.o\",\"description\":\"Komunik\\u00e1cia s klientmi, koordin\\u00e1cia zamestnancov, spr\\u00e1va a servis PC siete a techniky, v\\u00fddaj a evidencia n\\u00e1radia, objedn\\u00e1vanie tovaru, kontrola \\u00fadr\\u017eba a servis vozidiel, grafick\\u00e9 pr\\u00e1ce, reklamn\\u00e9 \\u010dinnosti, spr\\u00e1va webu, spr\\u00e1va doch\\u00e1dzkov\\u00e9ho syst\\u00e9mu, Word, Excel...\",\"from\":\"2015-01\",\"to\":\"2019-12\"},{\"title\":\"Administrat\\u00edvny pracovn\\u00edk\",\"company\":\"Haltex s.r.o.\",\"description\":\"Spr\\u00e1va eshopu a pr\\u00e1ca s PC (Word, Excel, internet,... ), kontakt so z\\u00e1kazn\\u00edkmi...\",\"from\":\"2014-01\",\"to\":\"2015-01\"},{\"title\":\"Asistent fotografa \\\/ \\u0161of\\u00e9r osobn\\u00e9ho auta\",\"company\":\"Micor s.r.o.\",\"description\":\"riadenie a \\u00fadr\\u017eba osobn\\u00e9ho vozidla, v\\u00fdpomoc s n\\u00e1rad\\u00edm a organizovan\\u00edm, kontakt s klientmi...\",\"from\":\"2012-01\",\"to\":\"2014-01\"}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index?per_page=20&page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index?per_page=20&page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index?per_page=20&page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/job\\\/index\",\"per_page\":20,\"to\":5,\"total\":5},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -225,7 +225,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "01hhsptjjtf0zcbjt6t05fyggs",
+                                    "value": "01hhz3xzjge1x1j9avp4gj5wqz",
                                     "description": "The slug of the job."
                                 },
                                 {
@@ -270,7 +270,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "45"
+                                    "value": "54"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -278,7 +278,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":\"01hhsptjjtf0zcbjt6t05fyggs\",\"title\":\"Backend Developer\",\"company\":\"WAME\",\"description\":\"Laravel a Laravel nova\",\"from\":\"2021-12-31T23:00:00.000000Z\",\"to\":\"2022-12-31T23:00:00.000000Z\",\"created_at\":\"2023-12-16T16:19:51.000000Z\",\"updated_at\":\"2023-12-16T16:19:51.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":{\"title\":\"Backend Developer\",\"company\":\"WAME s.r.o.\",\"description\":\"Tvorba backendu pre mobiln\\u00e9 a webov\\u00e9 aplik\\u00e1cie v laraveli, pr\\u00edprava api pre frontend, kompletn\\u00e9 administra\\u010dn\\u00e9 rozhranie v Laravel Nova a Vue.js\",\"from\":\"2022-01\",\"to\":\"2023-12\"},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -335,7 +335,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "42"
+                                    "value": "51"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -343,7 +343,72 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"jobs\":[\"Backend Developer\",\"Wordpres program\\u00e1tor\"],\"favorite_tools\":[\"Php Storm\",\"Visual Studio Code\",\"Git \\\/ GitHub\",\"Heidi SQL\",\"MAMP \\\/ Laragon\",\"Postman \\\/ Insomnia\",\"Chat GPT\"],\"certificates\":[\"JavaScript\",\"PHP\"],\"skills\":[{\"title\":\"JavaScript\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"PHP\",\"description\":\"pokro\\u010dil\\u00fd\"}]}],\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":[{\"jobs\":[\"Backend Developer\",\"Fullstack \\\/ Wordpress developer\",\"Office manager\",\"Administrat\\u00edvny pracovn\\u00edk\",\"Asistent fotografa \\\/ \\u0161of\\u00e9r osobn\\u00e9ho auta\"],\"favorite_tools\":[\"Php Storm\",\"Visual Studio Code\",\"MAMP \\\/ Laragon\",\"Postman \\\/ Insomnia\",\"Cmder\",\"Chat GPT\",\"Photoshop\"],\"certificates\":[\"JavaScript\",\"PHP\",\"SQL\",\"Laravel\",\"OOP\",\"Wordpress pre program\\u00e1tora: T\\u00e9my\",\"Wordpress pre program\\u00e1tora: Pluginy\",\"SEO\"],\"skills\":[{\"title\":\"JavaScript, jQuery\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"PHP\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"Laravel\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"Laravel Nova\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"Vue\",\"description\":\"stredne pokro\\u010dil\\u00fd\"},{\"title\":\"CSS\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"Git, Github\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"HTML\",\"description\":\"profesion\\u00e1l\"},{\"title\":\"SQL\",\"description\":\"stredne pokro\\u010dil\\u00fd\"},{\"title\":\"Tailwind CSS, Sass\",\"description\":\"stredne pokro\\u010dil\\u00fd\"},{\"title\":\"Adobe Photoshop\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"Wordpress, Woocomerce\",\"description\":\"pokro\\u010dil\\u00fd\"},{\"title\":\"SEO\",\"description\":\"pokro\\u010dil\\u00fd\"}]}],\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Setting",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET Setting index",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/settings",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/settings"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":1,\"per_page\":20}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "50"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"address\":\"Hervartov 68\",\"phone\":\"+421948098889\",\"email\":\"p.petermanik@gmail.com\"},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -400,7 +465,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "50"
+                                    "value": "59"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -408,7 +473,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"title\":\"JavaScript\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":80,\"status\":1},{\"title\":\"PHP\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":80,\"status\":1}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index?page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index\",\"per_page\":20,\"to\":2,\"total\":2},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":[{\"title\":\"JavaScript, jQuery\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":74},{\"title\":\"PHP\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":76},{\"title\":\"Laravel\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":70},{\"title\":\"Laravel Nova\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":78},{\"title\":\"Vue\",\"description\":\"stredne pokro\\u010dil\\u00fd\",\"progress\":70},{\"title\":\"CSS\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":70},{\"title\":\"Git, Github\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":75},{\"title\":\"HTML\",\"description\":\"profesion\\u00e1l\",\"progress\":90},{\"title\":\"SQL\",\"description\":\"stredne pokro\\u010dil\\u00fd\",\"progress\":60},{\"title\":\"Tailwind CSS, Sass\",\"description\":\"stredne pokro\\u010dil\\u00fd\",\"progress\":60},{\"title\":\"Adobe Photoshop\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":70},{\"title\":\"Wordpress, Woocomerce\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":75},{\"title\":\"SEO\",\"description\":\"pokro\\u010dil\\u00fd\",\"progress\":68}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index?per_page=20&page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index?per_page=20&page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index?per_page=20&page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/skill\\\/index\",\"per_page\":20,\"to\":13,\"total\":13},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -425,7 +490,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "01hhskp82j73b819zd0bfm68nh",
+                                    "value": "01hhz3xwqhppm74pthff4w1gvb",
                                     "description": "The slug of the skill."
                                 },
                                 {
@@ -470,7 +535,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "49"
+                                    "value": "58"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -478,7 +543,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":\"01hhskp82j73b819zd0bfm68nh\",\"title\":\"JavaScript\",\"description\":\"pokro\\u010dil\\u00fd\",\"status\":1,\"progress\":80,\"created_at\":\"2023-12-16T15:25:03.000000Z\",\"updated_at\":\"2023-12-16T15:25:03.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":{\"id\":\"01hhz3xwqhppm74pthff4w1gvb\",\"title\":\"JavaScript, jQuery\",\"description\":\"pokro\\u010dil\\u00fd\",\"status\":1,\"progress\":74,\"created_at\":\"2023-12-18T18:45:03.000000Z\",\"updated_at\":\"2023-12-18T21:06:05.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -535,7 +600,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "48"
+                                    "value": "57"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -543,7 +608,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":\"01hhskp83f1r2169gyn0y793hg\",\"title\":\"Php Storm\",\"description\":\"IDE\",\"status\":1,\"priority\":1,\"created_at\":\"2023-12-16T15:25:03.000000Z\",\"updated_at\":\"2023-12-16T15:25:03.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskp8eqzgpx29d6n5vhy7hr\",\"title\":\"Visual Studio Code\",\"description\":\"Editor\",\"status\":1,\"priority\":2,\"created_at\":\"2023-12-16T15:25:04.000000Z\",\"updated_at\":\"2023-12-16T15:25:04.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskp8qy6ckmvby8b1mrnme0\",\"title\":\"Git \\\/ GitHub\",\"description\":\"Verzovanie k\\u00f3du\",\"status\":1,\"priority\":3,\"created_at\":\"2023-12-16T15:25:04.000000Z\",\"updated_at\":\"2023-12-16T15:25:04.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskp9pkvfed03et00wzhtdz\",\"title\":\"Heidi SQL\",\"description\":\"Pr\\u00e1ca s DB\",\"status\":1,\"priority\":4,\"created_at\":\"2023-12-16T15:25:05.000000Z\",\"updated_at\":\"2023-12-16T15:25:05.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskpxnc5c3p81zzana0m908\",\"title\":\"MAMP \\\/ Laragon\",\"description\":\"Pre pr\\u00e1cu na localhoste\",\"status\":1,\"priority\":5,\"created_at\":\"2023-12-16T15:25:26.000000Z\",\"updated_at\":\"2023-12-16T15:25:26.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskpy1teefab48enr48bg5n\",\"title\":\"Postman \\\/ Insomnia\",\"description\":\"Pre testovanie API\",\"status\":1,\"priority\":6,\"created_at\":\"2023-12-16T15:25:26.000000Z\",\"updated_at\":\"2023-12-16T15:25:26.000000Z\",\"deleted_at\":null},{\"id\":\"01hhskpyb1h893aqvamkpwtvf6\",\"title\":\"Chat GPT\",\"description\":\"U\\u017eito\\u010dn\\u00fd pomocn\\u00edk pri p\\u00edsan\\u00ed k\\u00f3du\",\"status\":1,\"priority\":7,\"created_at\":\"2023-12-16T15:25:26.000000Z\",\"updated_at\":\"2023-12-16T15:25:26.000000Z\",\"deleted_at\":null}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index?page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index\",\"per_page\":20,\"to\":7,\"total\":7},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":[{\"title\":\"Php Storm\",\"description\":\"IDE\"},{\"title\":\"Visual Studio Code\",\"description\":\"Editor\"},{\"title\":\"MAMP \\\/ Laragon\",\"description\":\"Pre pr\\u00e1cu na localhoste\"},{\"title\":\"Postman \\\/ Insomnia\",\"description\":\"Pre testovanie API\"},{\"title\":\"Cmder\",\"description\":\"Pre pr\\u00e1cu s konzolou \\\/ pr\\u00edkazov\\u00fd termin\\u00e1l\"},{\"title\":\"Chat GPT\",\"description\":\"U\\u017eito\\u010dn\\u00fd pomocn\\u00edk pri p\\u00edsan\\u00ed k\\u00f3du\"},{\"title\":\"Photoshop\",\"description\":\"Pre \\u00fapravu a tvorbu grafiky\"}],\"links\":{\"first\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index?per_page=20&page=1\",\"last\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index?per_page=20&page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Predch\\u00e1dzaj\\u00faca\",\"active\":false},{\"url\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index?per_page=20&page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"\\u010eal\\u0161ia &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/cv\\\/api\\\/v1\\\/tool\\\/index\",\"per_page\":20,\"to\":7,\"total\":7},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]
@@ -560,7 +625,7 @@
                                 {
                                     "id": "slug",
                                     "key": "slug",
-                                    "value": "01hhskp83f1r2169gyn0y793hg",
+                                    "value": "01hhz3xwrwrbpsrd3fxebzn2by",
                                     "description": "The slug of the tool."
                                 },
                                 {
@@ -605,7 +670,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "47"
+                                    "value": "56"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -613,7 +678,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":\"01hhskp83f1r2169gyn0y793hg\",\"title\":\"Php Storm\",\"description\":\"IDE\",\"status\":1,\"priority\":1,\"created_at\":\"2023-12-16T15:25:03.000000Z\",\"updated_at\":\"2023-12-16T15:25:03.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
+                            "body": "{\"data\":{\"id\":\"01hhz3xwrwrbpsrd3fxebzn2by\",\"title\":\"Php Storm\",\"description\":\"IDE\",\"status\":1,\"priority\":1,\"created_at\":\"2023-12-18T18:45:03.000000Z\",\"updated_at\":\"2023-12-18T21:21:16.000000Z\",\"deleted_at\":null},\"code\":\"1\",\"errors\":null,\"additional_data\":null,\"message\":\"Po\\u017eiadavka bola \\u00faspe\\u0161ne vr\\u00e1ten\\u00e1\"}",
                             "name": ""
                         }
                     ]

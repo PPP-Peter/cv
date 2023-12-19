@@ -49,12 +49,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":"01hhskp6g71sm9v6r6tgg96drs","title":"JavaScript","description":"JavaScript a ES6 - Skillmea","status":1,"created_at":"2023-12-16T15:25:02.000000Z","updated_at":"2023-12-16T15:25:02.000000Z","deleted_at":null},{"id":"01hhskp7eh7bzg0nxam52jepz9","title":"PHP","description":"PHP - Skillmea","status":1,"created_at":"2023-12-16T15:25:03.000000Z","updated_at":"2023-12-16T15:25:03.000000Z","deleted_at":null}],"links":{"first":"http:\/\/cv\/api\/v1\/certificate\/index?page=1","last":"http:\/\/cv\/api\/v1\/certificate\/index?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/certificate\/index?page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/certificate\/index","per_page":20,"to":2,"total":2},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":[{"id":"01hhz3xs9b704zepc25tss028q","title":"JavaScript","description":"JavaScript a ES6 - Skillmea","status":1,"created_at":"2023-12-18T18:45:00.000000Z","updated_at":"2023-12-18T18:45:00.000000Z","deleted_at":null},{"id":"01hhz3xsyhddkzsqbxxy1vsj47","title":"PHP","description":"PHP - Skillmea","status":1,"created_at":"2023-12-18T18:45:01.000000Z","updated_at":"2023-12-18T18:45:01.000000Z","deleted_at":null},{"id":"01hhz3xtf84t87egsg649rchcg","title":"SQL","description":"SQL - Skillmea","status":1,"created_at":"2023-12-18T18:45:01.000000Z","updated_at":"2023-12-18T18:45:01.000000Z","deleted_at":null},{"id":"01hhz3xtva40c0vjre9jj4rhy2","title":"Laravel","description":"OOP a Laravel - Skillmea","status":1,"created_at":"2023-12-18T18:45:01.000000Z","updated_at":"2023-12-18T18:45:01.000000Z","deleted_at":null},{"id":"01hhz3xv6tdx38hva2jcrphf19","title":"OOP","description":"Objektovo orientovan\u00e9 programovanie - Skillmea","status":1,"created_at":"2023-12-18T18:45:02.000000Z","updated_at":"2023-12-18T18:45:02.000000Z","deleted_at":null},{"id":"01hhz3xvhs74tpszhdbf31zc8k","title":"Wordpress pre program\u00e1tora: T\u00e9my","description":"Wordpress pre program\u00e1tora: T\u00e9my - Skillmea","status":1,"created_at":"2023-12-18T18:45:02.000000Z","updated_at":"2023-12-18T18:45:02.000000Z","deleted_at":null},{"id":"01hhz3xvwwab310x1w0s75k5sb","title":"Wordpress pre program\u00e1tora: Pluginy","description":"Wordpress pre program\u00e1tora: Pluginy a r\u00fdchlos\u0165 webu- Skillmea","status":1,"created_at":"2023-12-18T18:45:03.000000Z","updated_at":"2023-12-18T18:45:03.000000Z","deleted_at":null},{"id":"01hhz3xwax72bwzmvmz3yyp7p1","title":"SEO","description":"Pokro\u010dil\u00e9 SEO strat\u00e9gie - Skillmea","status":1,"created_at":"2023-12-18T18:45:03.000000Z","updated_at":"2023-12-18T18:45:03.000000Z","deleted_at":null}],"links":{"first":"http:\/\/cv\/api\/v1\/certificate\/index?per_page=20&page=1","last":"http:\/\/cv\/api\/v1\/certificate\/index?per_page=20&page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/certificate\/index?per_page=20&page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/certificate\/index","per_page":20,"to":8,"total":8},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '44'
+          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -85,7 +85,7 @@ endpoints:
         name: slug
         description: 'The slug of the certificate.'
         required: true
-        example: 01hhskp6g71sm9v6r6tgg96drs
+        example: 01hhz3xs9b704zepc25tss028q
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,7 +100,7 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanUrlParameters:
-      slug: 01hhskp6g71sm9v6r6tgg96drs
+      slug: 01hhz3xs9b704zepc25tss028q
       id: 01gsa40bvafp2tewxh67bbphw2
     queryParameters: []
     cleanQueryParameters: []
@@ -110,12 +110,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":"01hhskp6g71sm9v6r6tgg96drs","title":"JavaScript","description":"JavaScript a ES6 - Skillmea","status":1,"created_at":"2023-12-16T15:25:02.000000Z","updated_at":"2023-12-16T15:25:02.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":{"id":"01hhz3xs9b704zepc25tss028q","title":"JavaScript","description":"JavaScript a ES6 - Skillmea","status":1,"created_at":"2023-12-18T18:45:00.000000Z","updated_at":"2023-12-18T18:45:00.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '43'
+          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
         description: null
         custom: []

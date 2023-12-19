@@ -47,12 +47,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"jobs":["Backend Developer","Wordpres program\u00e1tor"],"favorite_tools":["Php Storm","Visual Studio Code","Git \/ GitHub","Heidi SQL","MAMP \/ Laragon","Postman \/ Insomnia","Chat GPT"],"certificates":["JavaScript","PHP"],"skills":[{"title":"JavaScript","description":"pokro\u010dil\u00fd"},{"title":"PHP","description":"pokro\u010dil\u00fd"}]}],"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":[{"jobs":["Backend Developer","Fullstack \/ Wordpress developer","Office manager","Administrat\u00edvny pracovn\u00edk","Asistent fotografa \/ \u0161of\u00e9r osobn\u00e9ho auta"],"favorite_tools":["Php Storm","Visual Studio Code","MAMP \/ Laragon","Postman \/ Insomnia","Cmder","Chat GPT","Photoshop"],"certificates":["JavaScript","PHP","SQL","Laravel","OOP","Wordpress pre program\u00e1tora: T\u00e9my","Wordpress pre program\u00e1tora: Pluginy","SEO"],"skills":[{"title":"JavaScript, jQuery","description":"pokro\u010dil\u00fd"},{"title":"PHP","description":"pokro\u010dil\u00fd"},{"title":"Laravel","description":"pokro\u010dil\u00fd"},{"title":"Laravel Nova","description":"pokro\u010dil\u00fd"},{"title":"Vue","description":"stredne pokro\u010dil\u00fd"},{"title":"CSS","description":"pokro\u010dil\u00fd"},{"title":"Git, Github","description":"pokro\u010dil\u00fd"},{"title":"HTML","description":"profesion\u00e1l"},{"title":"SQL","description":"stredne pokro\u010dil\u00fd"},{"title":"Tailwind CSS, Sass","description":"stredne pokro\u010dil\u00fd"},{"title":"Adobe Photoshop","description":"pokro\u010dil\u00fd"},{"title":"Wordpress, Woocomerce","description":"pokro\u010dil\u00fd"},{"title":"SEO","description":"pokro\u010dil\u00fd"}]}],"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '42'
+          x-ratelimit-remaining: '51'
           access-control-allow-origin: '*'
         description: null
         custom: []

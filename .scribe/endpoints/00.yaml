@@ -47,12 +47,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"JavaScript","description":"pokro\u010dil\u00fd","progress":80,"status":1},{"title":"PHP","description":"pokro\u010dil\u00fd","progress":80,"status":1}],"links":{"first":"http:\/\/cv\/api\/v1\/skill\/index?page=1","last":"http:\/\/cv\/api\/v1\/skill\/index?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/skill\/index?page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/skill\/index","per_page":20,"to":2,"total":2},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":[{"title":"JavaScript, jQuery","description":"pokro\u010dil\u00fd","progress":74},{"title":"PHP","description":"pokro\u010dil\u00fd","progress":76},{"title":"Laravel","description":"pokro\u010dil\u00fd","progress":70},{"title":"Laravel Nova","description":"pokro\u010dil\u00fd","progress":78},{"title":"Vue","description":"stredne pokro\u010dil\u00fd","progress":70},{"title":"CSS","description":"pokro\u010dil\u00fd","progress":70},{"title":"Git, Github","description":"pokro\u010dil\u00fd","progress":75},{"title":"HTML","description":"profesion\u00e1l","progress":90},{"title":"SQL","description":"stredne pokro\u010dil\u00fd","progress":60},{"title":"Tailwind CSS, Sass","description":"stredne pokro\u010dil\u00fd","progress":60},{"title":"Adobe Photoshop","description":"pokro\u010dil\u00fd","progress":70},{"title":"Wordpress, Woocomerce","description":"pokro\u010dil\u00fd","progress":75},{"title":"SEO","description":"pokro\u010dil\u00fd","progress":68}],"links":{"first":"http:\/\/cv\/api\/v1\/skill\/index?per_page=20&page=1","last":"http:\/\/cv\/api\/v1\/skill\/index?per_page=20&page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/skill\/index?per_page=20&page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/skill\/index","per_page":20,"to":13,"total":13},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '50'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: slug
         description: 'The slug of the skill.'
         required: true
-        example: 01hhskp82j73b819zd0bfm68nh
+        example: 01hhz3xwqhppm74pthff4w1gvb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +98,7 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanUrlParameters:
-      slug: 01hhskp82j73b819zd0bfm68nh
+      slug: 01hhz3xwqhppm74pthff4w1gvb
       id: 01gsa40bvafp2tewxh67bbphw2
     queryParameters: []
     cleanQueryParameters: []
@@ -108,12 +108,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":"01hhskp82j73b819zd0bfm68nh","title":"JavaScript","description":"pokro\u010dil\u00fd","status":1,"progress":80,"created_at":"2023-12-16T15:25:03.000000Z","updated_at":"2023-12-16T15:25:03.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":{"id":"01hhz3xwqhppm74pthff4w1gvb","title":"JavaScript, jQuery","description":"pokro\u010dil\u00fd","status":1,"progress":74,"created_at":"2023-12-18T18:45:03.000000Z","updated_at":"2023-12-18T21:06:05.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '49'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
         custom: []

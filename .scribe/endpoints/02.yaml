@@ -47,12 +47,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"title":"Backend Developer","description":"Laravel a Laravel nova","company":"WAME","from":"2021-12-31T23:00:00.000000Z","to":"2022-12-31T23:00:00.000000Z"},{"title":"Wordpres program\u00e1tor","description":"Wordpres str\u00e1nky a Woocomerce eshopy","company":"B-commerce","from":"2021-12-31T23:00:00.000000Z","to":"2020-12-31T23:00:00.000000Z"}],"links":{"first":"http:\/\/cv\/api\/v1\/job\/index?page=1","last":"http:\/\/cv\/api\/v1\/job\/index?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/job\/index?page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/job\/index","per_page":20,"to":2,"total":2},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":[{"title":"Backend Developer","company":"WAME s.r.o.","description":"Tvorba backendu pre mobiln\u00e9 a webov\u00e9 aplik\u00e1cie v laraveli, pr\u00edprava api pre frontend, kompletn\u00e9 administra\u010dn\u00e9 rozhranie v Laravel Nova a Vue.js","from":"2022-01","to":"2023-12"},{"title":"Fullstack \/ Wordpress developer","company":"B-commerce s.r.o.","description":"Kompletn\u00e1 spr\u00e1va, tvorba, \u00faprava a optimaliz\u00e1cia e-shopov a str\u00e1nok postaven\u00fdch na Wordpresse, v\u00fdvoj vlastn\u00fdch pluginov a funkci\u00ed, \u00faprava CSS,  implement\u00e1cia extern\u00fdch rie\u0161en\u00ed.","from":"2020-10","to":"2021-12"},{"title":"Office manager","company":"Landberg s.r.o","description":"Komunik\u00e1cia s klientmi, koordin\u00e1cia zamestnancov, spr\u00e1va a servis PC siete a techniky, v\u00fddaj a evidencia n\u00e1radia, objedn\u00e1vanie tovaru, kontrola \u00fadr\u017eba a servis vozidiel, grafick\u00e9 pr\u00e1ce, reklamn\u00e9 \u010dinnosti, spr\u00e1va webu, spr\u00e1va doch\u00e1dzkov\u00e9ho syst\u00e9mu, Word, Excel...","from":"2015-01","to":"2019-12"},{"title":"Administrat\u00edvny pracovn\u00edk","company":"Haltex s.r.o.","description":"Spr\u00e1va eshopu a pr\u00e1ca s PC (Word, Excel, internet,... ), kontakt so z\u00e1kazn\u00edkmi...","from":"2014-01","to":"2015-01"},{"title":"Asistent fotografa \/ \u0161of\u00e9r osobn\u00e9ho auta","company":"Micor s.r.o.","description":"riadenie a \u00fadr\u017eba osobn\u00e9ho vozidla, v\u00fdpomoc s n\u00e1rad\u00edm a organizovan\u00edm, kontakt s klientmi...","from":"2012-01","to":"2014-01"}],"links":{"first":"http:\/\/cv\/api\/v1\/job\/index?per_page=20&page=1","last":"http:\/\/cv\/api\/v1\/job\/index?per_page=20&page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/job\/index?per_page=20&page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/job\/index","per_page":20,"to":5,"total":5},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '46'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: slug
         description: 'The slug of the job.'
         required: true
-        example: 01hhsptjjtf0zcbjt6t05fyggs
+        example: 01hhz3xzjge1x1j9avp4gj5wqz
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +98,7 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanUrlParameters:
-      slug: 01hhsptjjtf0zcbjt6t05fyggs
+      slug: 01hhz3xzjge1x1j9avp4gj5wqz
       id: 01gsa40bvafp2tewxh67bbphw2
     queryParameters: []
     cleanQueryParameters: []
@@ -108,12 +108,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":"01hhsptjjtf0zcbjt6t05fyggs","title":"Backend Developer","company":"WAME","description":"Laravel a Laravel nova","from":"2021-12-31T23:00:00.000000Z","to":"2022-12-31T23:00:00.000000Z","created_at":"2023-12-16T16:19:51.000000Z","updated_at":"2023-12-16T16:19:51.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":{"title":"Backend Developer","company":"WAME s.r.o.","description":"Tvorba backendu pre mobiln\u00e9 a webov\u00e9 aplik\u00e1cie v laraveli, pr\u00edprava api pre frontend, kompletn\u00e9 administra\u010dn\u00e9 rozhranie v Laravel Nova a Vue.js","from":"2022-01","to":"2023-12"},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '45'
+          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
         description: null
         custom: []

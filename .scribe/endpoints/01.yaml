@@ -47,12 +47,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":"01hhskp83f1r2169gyn0y793hg","title":"Php Storm","description":"IDE","status":1,"priority":1,"created_at":"2023-12-16T15:25:03.000000Z","updated_at":"2023-12-16T15:25:03.000000Z","deleted_at":null},{"id":"01hhskp8eqzgpx29d6n5vhy7hr","title":"Visual Studio Code","description":"Editor","status":1,"priority":2,"created_at":"2023-12-16T15:25:04.000000Z","updated_at":"2023-12-16T15:25:04.000000Z","deleted_at":null},{"id":"01hhskp8qy6ckmvby8b1mrnme0","title":"Git \/ GitHub","description":"Verzovanie k\u00f3du","status":1,"priority":3,"created_at":"2023-12-16T15:25:04.000000Z","updated_at":"2023-12-16T15:25:04.000000Z","deleted_at":null},{"id":"01hhskp9pkvfed03et00wzhtdz","title":"Heidi SQL","description":"Pr\u00e1ca s DB","status":1,"priority":4,"created_at":"2023-12-16T15:25:05.000000Z","updated_at":"2023-12-16T15:25:05.000000Z","deleted_at":null},{"id":"01hhskpxnc5c3p81zzana0m908","title":"MAMP \/ Laragon","description":"Pre pr\u00e1cu na localhoste","status":1,"priority":5,"created_at":"2023-12-16T15:25:26.000000Z","updated_at":"2023-12-16T15:25:26.000000Z","deleted_at":null},{"id":"01hhskpy1teefab48enr48bg5n","title":"Postman \/ Insomnia","description":"Pre testovanie API","status":1,"priority":6,"created_at":"2023-12-16T15:25:26.000000Z","updated_at":"2023-12-16T15:25:26.000000Z","deleted_at":null},{"id":"01hhskpyb1h893aqvamkpwtvf6","title":"Chat GPT","description":"U\u017eito\u010dn\u00fd pomocn\u00edk pri p\u00edsan\u00ed k\u00f3du","status":1,"priority":7,"created_at":"2023-12-16T15:25:26.000000Z","updated_at":"2023-12-16T15:25:26.000000Z","deleted_at":null}],"links":{"first":"http:\/\/cv\/api\/v1\/tool\/index?page=1","last":"http:\/\/cv\/api\/v1\/tool\/index?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/tool\/index?page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/tool\/index","per_page":20,"to":7,"total":7},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":[{"title":"Php Storm","description":"IDE"},{"title":"Visual Studio Code","description":"Editor"},{"title":"MAMP \/ Laragon","description":"Pre pr\u00e1cu na localhoste"},{"title":"Postman \/ Insomnia","description":"Pre testovanie API"},{"title":"Cmder","description":"Pre pr\u00e1cu s konzolou \/ pr\u00edkazov\u00fd termin\u00e1l"},{"title":"Chat GPT","description":"U\u017eito\u010dn\u00fd pomocn\u00edk pri p\u00edsan\u00ed k\u00f3du"},{"title":"Photoshop","description":"Pre \u00fapravu a tvorbu grafiky"}],"links":{"first":"http:\/\/cv\/api\/v1\/tool\/index?per_page=20&page=1","last":"http:\/\/cv\/api\/v1\/tool\/index?per_page=20&page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Predch\u00e1dzaj\u00faca","active":false},{"url":"http:\/\/cv\/api\/v1\/tool\/index?per_page=20&page=1","label":"1","active":true},{"url":null,"label":"\u010eal\u0161ia &raquo;","active":false}],"path":"http:\/\/cv\/api\/v1\/tool\/index","per_page":20,"to":7,"total":7},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '48'
+          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: slug
         description: 'The slug of the tool.'
         required: true
-        example: 01hhskp83f1r2169gyn0y793hg
+        example: 01hhz3xwrwrbpsrd3fxebzn2by
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +98,7 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanUrlParameters:
-      slug: 01hhskp83f1r2169gyn0y793hg
+      slug: 01hhz3xwrwrbpsrd3fxebzn2by
       id: 01gsa40bvafp2tewxh67bbphw2
     queryParameters: []
     cleanQueryParameters: []
@@ -108,12 +108,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":"01hhskp83f1r2169gyn0y793hg","title":"Php Storm","description":"IDE","status":1,"priority":1,"created_at":"2023-12-16T15:25:03.000000Z","updated_at":"2023-12-16T15:25:03.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
+        content: '{"data":{"id":"01hhz3xwrwrbpsrd3fxebzn2by","title":"Php Storm","description":"IDE","status":1,"priority":1,"created_at":"2023-12-18T18:45:03.000000Z","updated_at":"2023-12-18T21:21:16.000000Z","deleted_at":null},"code":"1","errors":null,"additional_data":null,"message":"Po\u017eiadavka bola \u00faspe\u0161ne vr\u00e1ten\u00e1"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '47'
+          x-ratelimit-remaining: '56'
           access-control-allow-origin: '*'
         description: null
         custom: []

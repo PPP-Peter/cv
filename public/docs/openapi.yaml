@@ -23,24 +23,72 @@ paths:
                 example:
                   data:
                     -
-                      id: 01hhskp6g71sm9v6r6tgg96drs
+                      id: 01hhz3xs9b704zepc25tss028q
                       title: JavaScript
                       description: 'JavaScript a ES6 - Skillmea'
                       status: 1
-                      created_at: '2023-12-16T15:25:02.000000Z'
-                      updated_at: '2023-12-16T15:25:02.000000Z'
+                      created_at: '2023-12-18T18:45:00.000000Z'
+                      updated_at: '2023-12-18T18:45:00.000000Z'
                       deleted_at: null
                     -
-                      id: 01hhskp7eh7bzg0nxam52jepz9
+                      id: 01hhz3xsyhddkzsqbxxy1vsj47
                       title: PHP
                       description: 'PHP - Skillmea'
                       status: 1
-                      created_at: '2023-12-16T15:25:03.000000Z'
-                      updated_at: '2023-12-16T15:25:03.000000Z'
+                      created_at: '2023-12-18T18:45:01.000000Z'
+                      updated_at: '2023-12-18T18:45:01.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhz3xtf84t87egsg649rchcg
+                      title: SQL
+                      description: 'SQL - Skillmea'
+                      status: 1
+                      created_at: '2023-12-18T18:45:01.000000Z'
+                      updated_at: '2023-12-18T18:45:01.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhz3xtva40c0vjre9jj4rhy2
+                      title: Laravel
+                      description: 'OOP a Laravel - Skillmea'
+                      status: 1
+                      created_at: '2023-12-18T18:45:01.000000Z'
+                      updated_at: '2023-12-18T18:45:01.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhz3xv6tdx38hva2jcrphf19
+                      title: OOP
+                      description: 'Objektovo orientované programovanie - Skillmea'
+                      status: 1
+                      created_at: '2023-12-18T18:45:02.000000Z'
+                      updated_at: '2023-12-18T18:45:02.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhz3xvhs74tpszhdbf31zc8k
+                      title: 'Wordpress pre programátora: Témy'
+                      description: 'Wordpress pre programátora: Témy - Skillmea'
+                      status: 1
+                      created_at: '2023-12-18T18:45:02.000000Z'
+                      updated_at: '2023-12-18T18:45:02.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhz3xvwwab310x1w0s75k5sb
+                      title: 'Wordpress pre programátora: Pluginy'
+                      description: 'Wordpress pre programátora: Pluginy a rýchlosť webu- Skillmea'
+                      status: 1
+                      created_at: '2023-12-18T18:45:03.000000Z'
+                      updated_at: '2023-12-18T18:45:03.000000Z'
+                      deleted_at: null
+                    -
+                      id: 01hhz3xwax72bwzmvmz3yyp7p1
+                      title: SEO
+                      description: 'Pokročilé SEO stratégie - Skillmea'
+                      status: 1
+                      created_at: '2023-12-18T18:45:03.000000Z'
+                      updated_at: '2023-12-18T18:45:03.000000Z'
                       deleted_at: null
                   links:
-                    first: 'http://cv/api/v1/certificate/index?page=1'
-                    last: 'http://cv/api/v1/certificate/index?page=1'
+                    first: 'http://cv/api/v1/certificate/index?per_page=20&page=1'
+                    last: 'http://cv/api/v1/certificate/index?per_page=20&page=1'
                     prev: null
                     next: null
                   meta:
@@ -53,7 +101,7 @@ paths:
                         label: '&laquo; Predchádzajúca'
                         active: false
                       -
-                        url: 'http://cv/api/v1/certificate/index?page=1'
+                        url: 'http://cv/api/v1/certificate/index?per_page=20&page=1'
                         label: '1'
                         active: true
                       -
@@ -62,8 +110,8 @@ paths:
                         active: false
                     path: 'http://cv/api/v1/certificate/index'
                     per_page: 20
-                    to: 2
-                    total: 2
+                    to: 8
+                    total: 8
                   code: '1'
                   errors: null
                   additional_data: null
@@ -73,27 +121,75 @@ paths:
                     type: array
                     example:
                       -
-                        id: 01hhskp6g71sm9v6r6tgg96drs
+                        id: 01hhz3xs9b704zepc25tss028q
                         title: JavaScript
                         description: 'JavaScript a ES6 - Skillmea'
                         status: 1
-                        created_at: '2023-12-16T15:25:02.000000Z'
-                        updated_at: '2023-12-16T15:25:02.000000Z'
+                        created_at: '2023-12-18T18:45:00.000000Z'
+                        updated_at: '2023-12-18T18:45:00.000000Z'
                         deleted_at: null
                       -
-                        id: 01hhskp7eh7bzg0nxam52jepz9
+                        id: 01hhz3xsyhddkzsqbxxy1vsj47
                         title: PHP
                         description: 'PHP - Skillmea'
                         status: 1
-                        created_at: '2023-12-16T15:25:03.000000Z'
-                        updated_at: '2023-12-16T15:25:03.000000Z'
+                        created_at: '2023-12-18T18:45:01.000000Z'
+                        updated_at: '2023-12-18T18:45:01.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhz3xtf84t87egsg649rchcg
+                        title: SQL
+                        description: 'SQL - Skillmea'
+                        status: 1
+                        created_at: '2023-12-18T18:45:01.000000Z'
+                        updated_at: '2023-12-18T18:45:01.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhz3xtva40c0vjre9jj4rhy2
+                        title: Laravel
+                        description: 'OOP a Laravel - Skillmea'
+                        status: 1
+                        created_at: '2023-12-18T18:45:01.000000Z'
+                        updated_at: '2023-12-18T18:45:01.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhz3xv6tdx38hva2jcrphf19
+                        title: OOP
+                        description: 'Objektovo orientované programovanie - Skillmea'
+                        status: 1
+                        created_at: '2023-12-18T18:45:02.000000Z'
+                        updated_at: '2023-12-18T18:45:02.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhz3xvhs74tpszhdbf31zc8k
+                        title: 'Wordpress pre programátora: Témy'
+                        description: 'Wordpress pre programátora: Témy - Skillmea'
+                        status: 1
+                        created_at: '2023-12-18T18:45:02.000000Z'
+                        updated_at: '2023-12-18T18:45:02.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhz3xvwwab310x1w0s75k5sb
+                        title: 'Wordpress pre programátora: Pluginy'
+                        description: 'Wordpress pre programátora: Pluginy a rýchlosť webu- Skillmea'
+                        status: 1
+                        created_at: '2023-12-18T18:45:03.000000Z'
+                        updated_at: '2023-12-18T18:45:03.000000Z'
+                        deleted_at: null
+                      -
+                        id: 01hhz3xwax72bwzmvmz3yyp7p1
+                        title: SEO
+                        description: 'Pokročilé SEO stratégie - Skillmea'
+                        status: 1
+                        created_at: '2023-12-18T18:45:03.000000Z'
+                        updated_at: '2023-12-18T18:45:03.000000Z'
                         deleted_at: null
                     items:
                       type: object
                       properties:
                         id:
                           type: string
-                          example: 01hhskp6g71sm9v6r6tgg96drs
+                          example: 01hhz3xs9b704zepc25tss028q
                         title:
                           type: string
                           example: JavaScript
@@ -105,10 +201,10 @@ paths:
                           example: 1
                         created_at:
                           type: string
-                          example: '2023-12-16T15:25:02.000000Z'
+                          example: '2023-12-18T18:45:00.000000Z'
                         updated_at:
                           type: string
-                          example: '2023-12-16T15:25:02.000000Z'
+                          example: '2023-12-18T18:45:00.000000Z'
                         deleted_at:
                           type: string
                           example: null
@@ -117,10 +213,10 @@ paths:
                     properties:
                       first:
                         type: string
-                        example: 'http://cv/api/v1/certificate/index?page=1'
+                        example: 'http://cv/api/v1/certificate/index?per_page=20&page=1'
                       last:
                         type: string
-                        example: 'http://cv/api/v1/certificate/index?page=1'
+                        example: 'http://cv/api/v1/certificate/index?per_page=20&page=1'
                       prev:
                         type: string
                         example: null
@@ -147,7 +243,7 @@ paths:
                             label: '&laquo; Predchádzajúca'
                             active: false
                           -
-                            url: 'http://cv/api/v1/certificate/index?page=1'
+                            url: 'http://cv/api/v1/certificate/index?per_page=20&page=1'
                             label: '1'
                             active: true
                           -
@@ -174,10 +270,10 @@ paths:
                         example: 20
                       to:
                         type: integer
-                        example: 2
+                        example: 8
                       total:
                         type: integer
-                        example: 2
+                        example: 8
                   code:
                     type: string
                     example: '1'
@@ -223,12 +319,12 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 01hhskp6g71sm9v6r6tgg96drs
+                    id: 01hhz3xs9b704zepc25tss028q
                     title: JavaScript
                     description: 'JavaScript a ES6 - Skillmea'
                     status: 1
-                    created_at: '2023-12-16T15:25:02.000000Z'
-                    updated_at: '2023-12-16T15:25:02.000000Z'
+                    created_at: '2023-12-18T18:45:00.000000Z'
+                    updated_at: '2023-12-18T18:45:00.000000Z'
                     deleted_at: null
                   code: '1'
                   errors: null
@@ -240,7 +336,7 @@ paths:
                     properties:
                       id:
                         type: string
-                        example: 01hhskp6g71sm9v6r6tgg96drs
+                        example: 01hhz3xs9b704zepc25tss028q
                       title:
                         type: string
                         example: JavaScript
@@ -252,10 +348,10 @@ paths:
                         example: 1
                       created_at:
                         type: string
-                        example: '2023-12-16T15:25:02.000000Z'
+                        example: '2023-12-18T18:45:00.000000Z'
                       updated_at:
                         type: string
-                        example: '2023-12-16T15:25:02.000000Z'
+                        example: '2023-12-18T18:45:00.000000Z'
                       deleted_at:
                         type: string
                         example: null
@@ -279,7 +375,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the certificate.'
-        example: 01hhskp6g71sm9v6r6tgg96drs
+        example: 01hhz3xs9b704zepc25tss028q
         required: true
         schema:
           type: string
@@ -314,19 +410,37 @@ paths:
                   data:
                     -
                       title: 'Backend Developer'
-                      description: 'Laravel a Laravel nova'
-                      company: WAME
-                      from: '2021-12-31T23:00:00.000000Z'
-                      to: '2022-12-31T23:00:00.000000Z'
+                      company: 'WAME s.r.o.'
+                      description: 'Tvorba backendu pre mobilné a webové aplikácie v laraveli, príprava api pre frontend, kompletné administračné rozhranie v Laravel Nova a Vue.js'
+                      from: 2022-01
+                      to: 2023-12
                     -
-                      title: 'Wordpres programátor'
-                      description: 'Wordpres stránky a Woocomerce eshopy'
-                      company: B-commerce
-                      from: '2021-12-31T23:00:00.000000Z'
-                      to: '2020-12-31T23:00:00.000000Z'
+                      title: 'Fullstack / Wordpress developer'
+                      company: 'B-commerce s.r.o.'
+                      description: 'Kompletná správa, tvorba, úprava a optimalizácia e-shopov a stránok postavených na Wordpresse, vývoj vlastných pluginov a funkcií, úprava CSS,  implementácia externých riešení.'
+                      from: 2020-10
+                      to: 2021-12
+                    -
+                      title: 'Office manager'
+                      company: 'Landberg s.r.o'
+                      description: 'Komunikácia s klientmi, koordinácia zamestnancov, správa a servis PC siete a techniky, výdaj a evidencia náradia, objednávanie tovaru, kontrola údržba a servis vozidiel, grafické práce, reklamné činnosti, správa webu, správa dochádzkového systému, Word, Excel...'
+                      from: 2015-01
+                      to: 2019-12
+                    -
+                      title: 'Administratívny pracovník'
+                      company: 'Haltex s.r.o.'
+                      description: 'Správa eshopu a práca s PC (Word, Excel, internet,... ), kontakt so zákazníkmi...'
+                      from: 2014-01
+                      to: 2015-01
+                    -
+                      title: 'Asistent fotografa / šofér osobného auta'
+                      company: 'Micor s.r.o.'
+                      description: 'riadenie a údržba osobného vozidla, výpomoc s náradím a organizovaním, kontakt s klientmi...'
+                      from: 2012-01
+                      to: 2014-01
                   links:
-                    first: 'http://cv/api/v1/job/index?page=1'
-                    last: 'http://cv/api/v1/job/index?page=1'
+                    first: 'http://cv/api/v1/job/index?per_page=20&page=1'
+                    last: 'http://cv/api/v1/job/index?per_page=20&page=1'
                     prev: null
                     next: null
                   meta:
@@ -339,7 +453,7 @@ paths:
                         label: '&laquo; Predchádzajúca'
                         active: false
                       -
-                        url: 'http://cv/api/v1/job/index?page=1'
+                        url: 'http://cv/api/v1/job/index?per_page=20&page=1'
                         label: '1'
                         active: true
                       -
@@ -348,8 +462,8 @@ paths:
                         active: false
                     path: 'http://cv/api/v1/job/index'
                     per_page: 20
-                    to: 2
-                    total: 2
+                    to: 5
+                    total: 5
                   code: '1'
                   errors: null
                   additional_data: null
@@ -360,43 +474,61 @@ paths:
                     example:
                       -
                         title: 'Backend Developer'
-                        description: 'Laravel a Laravel nova'
-                        company: WAME
-                        from: '2021-12-31T23:00:00.000000Z'
-                        to: '2022-12-31T23:00:00.000000Z'
+                        company: 'WAME s.r.o.'
+                        description: 'Tvorba backendu pre mobilné a webové aplikácie v laraveli, príprava api pre frontend, kompletné administračné rozhranie v Laravel Nova a Vue.js'
+                        from: 2022-01
+                        to: 2023-12
                       -
-                        title: 'Wordpres programátor'
-                        description: 'Wordpres stránky a Woocomerce eshopy'
-                        company: B-commerce
-                        from: '2021-12-31T23:00:00.000000Z'
-                        to: '2020-12-31T23:00:00.000000Z'
+                        title: 'Fullstack / Wordpress developer'
+                        company: 'B-commerce s.r.o.'
+                        description: 'Kompletná správa, tvorba, úprava a optimalizácia e-shopov a stránok postavených na Wordpresse, vývoj vlastných pluginov a funkcií, úprava CSS,  implementácia externých riešení.'
+                        from: 2020-10
+                        to: 2021-12
+                      -
+                        title: 'Office manager'
+                        company: 'Landberg s.r.o'
+                        description: 'Komunikácia s klientmi, koordinácia zamestnancov, správa a servis PC siete a techniky, výdaj a evidencia náradia, objednávanie tovaru, kontrola údržba a servis vozidiel, grafické práce, reklamné činnosti, správa webu, správa dochádzkového systému, Word, Excel...'
+                        from: 2015-01
+                        to: 2019-12
+                      -
+                        title: 'Administratívny pracovník'
+                        company: 'Haltex s.r.o.'
+                        description: 'Správa eshopu a práca s PC (Word, Excel, internet,... ), kontakt so zákazníkmi...'
+                        from: 2014-01
+                        to: 2015-01
+                      -
+                        title: 'Asistent fotografa / šofér osobného auta'
+                        company: 'Micor s.r.o.'
+                        description: 'riadenie a údržba osobného vozidla, výpomoc s náradím a organizovaním, kontakt s klientmi...'
+                        from: 2012-01
+                        to: 2014-01
                     items:
                       type: object
                       properties:
                         title:
                           type: string
                           example: 'Backend Developer'
-                        description:
-                          type: string
-                          example: 'Laravel a Laravel nova'
                         company:
                           type: string
-                          example: WAME
+                          example: 'WAME s.r.o.'
+                        description:
+                          type: string
+                          example: 'Tvorba backendu pre mobilné a webové aplikácie v laraveli, príprava api pre frontend, kompletné administračné rozhranie v Laravel Nova a Vue.js'
                         from:
                           type: string
-                          example: '2021-12-31T23:00:00.000000Z'
+                          example: 2022-01
                         to:
                           type: string
-                          example: '2022-12-31T23:00:00.000000Z'
+                          example: 2023-12
                   links:
                     type: object
                     properties:
                       first:
                         type: string
-                        example: 'http://cv/api/v1/job/index?page=1'
+                        example: 'http://cv/api/v1/job/index?per_page=20&page=1'
                       last:
                         type: string
-                        example: 'http://cv/api/v1/job/index?page=1'
+                        example: 'http://cv/api/v1/job/index?per_page=20&page=1'
                       prev:
                         type: string
                         example: null
@@ -423,7 +555,7 @@ paths:
                             label: '&laquo; Predchádzajúca'
                             active: false
                           -
-                            url: 'http://cv/api/v1/job/index?page=1'
+                            url: 'http://cv/api/v1/job/index?per_page=20&page=1'
                             label: '1'
                             active: true
                           -
@@ -450,10 +582,10 @@ paths:
                         example: 20
                       to:
                         type: integer
-                        example: 2
+                        example: 5
                       total:
                         type: integer
-                        example: 2
+                        example: 5
                   code:
                     type: string
                     example: '1'
@@ -499,15 +631,11 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 01hhsptjjtf0zcbjt6t05fyggs
                     title: 'Backend Developer'
-                    company: WAME
-                    description: 'Laravel a Laravel nova'
-                    from: '2021-12-31T23:00:00.000000Z'
-                    to: '2022-12-31T23:00:00.000000Z'
-                    created_at: '2023-12-16T16:19:51.000000Z'
-                    updated_at: '2023-12-16T16:19:51.000000Z'
-                    deleted_at: null
+                    company: 'WAME s.r.o.'
+                    description: 'Tvorba backendu pre mobilné a webové aplikácie v laraveli, príprava api pre frontend, kompletné administračné rozhranie v Laravel Nova a Vue.js'
+                    from: 2022-01
+                    to: 2023-12
                   code: '1'
                   errors: null
                   additional_data: null
@@ -516,33 +644,21 @@ paths:
                   data:
                     type: object
                     properties:
-                      id:
-                        type: string
-                        example: 01hhsptjjtf0zcbjt6t05fyggs
                       title:
                         type: string
                         example: 'Backend Developer'
                       company:
                         type: string
-                        example: WAME
+                        example: 'WAME s.r.o.'
                       description:
                         type: string
-                        example: 'Laravel a Laravel nova'
+                        example: 'Tvorba backendu pre mobilné a webové aplikácie v laraveli, príprava api pre frontend, kompletné administračné rozhranie v Laravel Nova a Vue.js'
                       from:
                         type: string
-                        example: '2021-12-31T23:00:00.000000Z'
+                        example: 2022-01
                       to:
                         type: string
-                        example: '2022-12-31T23:00:00.000000Z'
-                      created_at:
-                        type: string
-                        example: '2023-12-16T16:19:51.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2023-12-16T16:19:51.000000Z'
-                      deleted_at:
-                        type: string
-                        example: null
+                        example: 2023-12
                   code:
                     type: string
                     example: '1'
@@ -563,7 +679,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the job.'
-        example: 01hhsptjjtf0zcbjt6t05fyggs
+        example: 01hhz3xzjge1x1j9avp4gj5wqz
         required: true
         schema:
           type: string
@@ -599,24 +715,66 @@ paths:
                     -
                       jobs:
                         - 'Backend Developer'
-                        - 'Wordpres programátor'
+                        - 'Fullstack / Wordpress developer'
+                        - 'Office manager'
+                        - 'Administratívny pracovník'
+                        - 'Asistent fotografa / šofér osobného auta'
                       favorite_tools:
                         - 'Php Storm'
                         - 'Visual Studio Code'
-                        - 'Git / GitHub'
-                        - 'Heidi SQL'
                         - 'MAMP / Laragon'
                         - 'Postman / Insomnia'
+                        - Cmder
                         - 'Chat GPT'
+                        - Photoshop
                       certificates:
                         - JavaScript
                         - PHP
+                        - SQL
+                        - Laravel
+                        - OOP
+                        - 'Wordpress pre programátora: Témy'
+                        - 'Wordpress pre programátora: Pluginy'
+                        - SEO
                       skills:
                         -
-                          title: JavaScript
+                          title: 'JavaScript, jQuery'
                           description: pokročilý
                         -
                           title: PHP
+                          description: pokročilý
+                        -
+                          title: Laravel
+                          description: pokročilý
+                        -
+                          title: 'Laravel Nova'
+                          description: pokročilý
+                        -
+                          title: Vue
+                          description: 'stredne pokročilý'
+                        -
+                          title: CSS
+                          description: pokročilý
+                        -
+                          title: 'Git, Github'
+                          description: pokročilý
+                        -
+                          title: HTML
+                          description: profesionál
+                        -
+                          title: SQL
+                          description: 'stredne pokročilý'
+                        -
+                          title: 'Tailwind CSS, Sass'
+                          description: 'stredne pokročilý'
+                        -
+                          title: 'Adobe Photoshop'
+                          description: pokročilý
+                        -
+                          title: 'Wordpress, Woocomerce'
+                          description: pokročilý
+                        -
+                          title: SEO
                           description: pokročilý
                   code: '1'
                   errors: null
@@ -629,24 +787,66 @@ paths:
                       -
                         jobs:
                           - 'Backend Developer'
-                          - 'Wordpres programátor'
+                          - 'Fullstack / Wordpress developer'
+                          - 'Office manager'
+                          - 'Administratívny pracovník'
+                          - 'Asistent fotografa / šofér osobného auta'
                         favorite_tools:
                           - 'Php Storm'
                           - 'Visual Studio Code'
-                          - 'Git / GitHub'
-                          - 'Heidi SQL'
                           - 'MAMP / Laragon'
                           - 'Postman / Insomnia'
+                          - Cmder
                           - 'Chat GPT'
+                          - Photoshop
                         certificates:
                           - JavaScript
                           - PHP
+                          - SQL
+                          - Laravel
+                          - OOP
+                          - 'Wordpress pre programátora: Témy'
+                          - 'Wordpress pre programátora: Pluginy'
+                          - SEO
                         skills:
                           -
-                            title: JavaScript
+                            title: 'JavaScript, jQuery'
                             description: pokročilý
                           -
                             title: PHP
+                            description: pokročilý
+                          -
+                            title: Laravel
+                            description: pokročilý
+                          -
+                            title: 'Laravel Nova'
+                            description: pokročilý
+                          -
+                            title: Vue
+                            description: 'stredne pokročilý'
+                          -
+                            title: CSS
+                            description: pokročilý
+                          -
+                            title: 'Git, Github'
+                            description: pokročilý
+                          -
+                            title: HTML
+                            description: profesionál
+                          -
+                            title: SQL
+                            description: 'stredne pokročilý'
+                          -
+                            title: 'Tailwind CSS, Sass'
+                            description: 'stredne pokročilý'
+                          -
+                            title: 'Adobe Photoshop'
+                            description: pokročilý
+                          -
+                            title: 'Wordpress, Woocomerce'
+                            description: pokročilý
+                          -
+                            title: SEO
                             description: pokročilý
                     items:
                       type: object
@@ -655,7 +855,10 @@ paths:
                           type: array
                           example:
                             - 'Backend Developer'
-                            - 'Wordpres programátor'
+                            - 'Fullstack / Wordpress developer'
+                            - 'Office manager'
+                            - 'Administratívny pracovník'
+                            - 'Asistent fotografa / šofér osobného auta'
                           items:
                             type: string
                         favorite_tools:
@@ -663,11 +866,11 @@ paths:
                           example:
                             - 'Php Storm'
                             - 'Visual Studio Code'
-                            - 'Git / GitHub'
-                            - 'Heidi SQL'
                             - 'MAMP / Laragon'
                             - 'Postman / Insomnia'
+                            - Cmder
                             - 'Chat GPT'
+                            - Photoshop
                           items:
                             type: string
                         certificates:
@@ -675,23 +878,62 @@ paths:
                           example:
                             - JavaScript
                             - PHP
+                            - SQL
+                            - Laravel
+                            - OOP
+                            - 'Wordpress pre programátora: Témy'
+                            - 'Wordpress pre programátora: Pluginy'
+                            - SEO
                           items:
                             type: string
                         skills:
                           type: array
                           example:
                             -
-                              title: JavaScript
+                              title: 'JavaScript, jQuery'
                               description: pokročilý
                             -
                               title: PHP
+                              description: pokročilý
+                            -
+                              title: Laravel
+                              description: pokročilý
+                            -
+                              title: 'Laravel Nova'
+                              description: pokročilý
+                            -
+                              title: Vue
+                              description: 'stredne pokročilý'
+                            -
+                              title: CSS
+                              description: pokročilý
+                            -
+                              title: 'Git, Github'
+                              description: pokročilý
+                            -
+                              title: HTML
+                              description: profesionál
+                            -
+                              title: SQL
+                              description: 'stredne pokročilý'
+                            -
+                              title: 'Tailwind CSS, Sass'
+                              description: 'stredne pokročilý'
+                            -
+                              title: 'Adobe Photoshop'
+                              description: pokročilý
+                            -
+                              title: 'Wordpress, Woocomerce'
+                              description: pokročilý
+                            -
+                              title: SEO
                               description: pokročilý
                           items:
                             type: object
                             properties:
                               title:
                                 type: string
-                                example: JavaScript
+                                example: 'JavaScript, jQuery'
                               description:
                                 type: string
                                 example: pokročilý
@@ -725,6 +967,71 @@ paths:
                   description: 'Pagination per page'
                   example: 20
       security: []
+  /api/v1/settings:
+    get:
+      summary: 'GET Setting index'
+      operationId: gETSettingIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    address: 'Hervartov 68'
+                    phone: '+421948098889'
+                    email: p.petermanik@gmail.com
+                  code: '1'
+                  errors: null
+                  additional_data: null
+                  message: 'Požiadavka bola úspešne vrátená'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      address:
+                        type: string
+                        example: 'Hervartov 68'
+                      phone:
+                        type: string
+                        example: '+421948098889'
+                      email:
+                        type: string
+                        example: p.petermanik@gmail.com
+                  code:
+                    type: string
+                    example: '1'
+                  errors:
+                    type: string
+                    example: null
+                  additional_data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Požiadavka bola úspešne vrátená'
+      tags:
+        - Setting
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Pagination page'
+                  example: 1
+                per_page:
+                  type: integer
+                  description: 'Pagination per page'
+                  example: 20
+      security: []
   /api/v1/skill/index:
     get:
       summary: 'GET Skill index'
@@ -741,18 +1048,60 @@ paths:
                 example:
                   data:
                     -
-                      title: JavaScript
+                      title: 'JavaScript, jQuery'
                       description: pokročilý
-                      progress: 80
-                      status: 1
+                      progress: 74
                     -
                       title: PHP
                       description: pokročilý
-                      progress: 80
-                      status: 1
+                      progress: 76
+                    -
+                      title: Laravel
+                      description: pokročilý
+                      progress: 70
+                    -
+                      title: 'Laravel Nova'
+                      description: pokročilý
+                      progress: 78
+                    -
+                      title: Vue
+                      description: 'stredne pokročilý'
+                      progress: 70
+                    -
+                      title: CSS
+                      description: pokročilý
+                      progress: 70
+                    -
+                      title: 'Git, Github'
+                      description: pokročilý
+                      progress: 75
+                    -
+                      title: HTML
+                      description: profesionál
+                      progress: 90
+                    -
+                      title: SQL
+                      description: 'stredne pokročilý'
+                      progress: 60
+                    -
+                      title: 'Tailwind CSS, Sass'
+                      description: 'stredne pokročilý'
+                      progress: 60
+                    -
+                      title: 'Adobe Photoshop'
+                      description: pokročilý
+                      progress: 70
+                    -
+                      title: 'Wordpress, Woocomerce'
+                      description: pokročilý
+                      progress: 75
+                    -
+                      title: SEO
+                      description: pokročilý
+                      progress: 68
                   links:
-                    first: 'http://cv/api/v1/skill/index?page=1'
-                    last: 'http://cv/api/v1/skill/index?page=1'
+                    first: 'http://cv/api/v1/skill/index?per_page=20&page=1'
+                    last: 'http://cv/api/v1/skill/index?per_page=20&page=1'
                     prev: null
                     next: null
                   meta:
@@ -765,7 +1114,7 @@ paths:
                         label: '&laquo; Predchádzajúca'
                         active: false
                       -
-                        url: 'http://cv/api/v1/skill/index?page=1'
+                        url: 'http://cv/api/v1/skill/index?per_page=20&page=1'
                         label: '1'
                         active: true
                       -
@@ -774,8 +1123,8 @@ paths:
                         active: false
                     path: 'http://cv/api/v1/skill/index'
                     per_page: 20
-                    to: 2
-                    total: 2
+                    to: 13
+                    total: 13
                   code: '1'
                   errors: null
                   additional_data: null
@@ -785,39 +1134,78 @@ paths:
                     type: array
                     example:
                       -
-                        title: JavaScript
+                        title: 'JavaScript, jQuery'
                         description: pokročilý
-                        progress: 80
-                        status: 1
+                        progress: 74
                       -
                         title: PHP
                         description: pokročilý
-                        progress: 80
-                        status: 1
+                        progress: 76
+                      -
+                        title: Laravel
+                        description: pokročilý
+                        progress: 70
+                      -
+                        title: 'Laravel Nova'
+                        description: pokročilý
+                        progress: 78
+                      -
+                        title: Vue
+                        description: 'stredne pokročilý'
+                        progress: 70
+                      -
+                        title: CSS
+                        description: pokročilý
+                        progress: 70
+                      -
+                        title: 'Git, Github'
+                        description: pokročilý
+                        progress: 75
+                      -
+                        title: HTML
+                        description: profesionál
+                        progress: 90
+                      -
+                        title: SQL
+                        description: 'stredne pokročilý'
+                        progress: 60
+                      -
+                        title: 'Tailwind CSS, Sass'
+                        description: 'stredne pokročilý'
+                        progress: 60
+                      -
+                        title: 'Adobe Photoshop'
+                        description: pokročilý
+                        progress: 70
+                      -
+                        title: 'Wordpress, Woocomerce'
+                        description: pokročilý
+                        progress: 75
+                      -
+                        title: SEO
+                        description: pokročilý
+                        progress: 68
                     items:
                       type: object
                       properties:
                         title:
                           type: string
-                          example: JavaScript
+                          example: 'JavaScript, jQuery'
                         description:
                           type: string
                           example: pokročilý
                         progress:
                           type: integer
-                          example: 80
-                        status:
-                          type: integer
-                          example: 1
+                          example: 74
                   links:
                     type: object
                     properties:
                       first:
                         type: string
-                        example: 'http://cv/api/v1/skill/index?page=1'
+                        example: 'http://cv/api/v1/skill/index?per_page=20&page=1'
                       last:
                         type: string
-                        example: 'http://cv/api/v1/skill/index?page=1'
+                        example: 'http://cv/api/v1/skill/index?per_page=20&page=1'
                       prev:
                         type: string
                         example: null
@@ -844,7 +1232,7 @@ paths:
                             label: '&laquo; Predchádzajúca'
                             active: false
                           -
-                            url: 'http://cv/api/v1/skill/index?page=1'
+                            url: 'http://cv/api/v1/skill/index?per_page=20&page=1'
                             label: '1'
                             active: true
                           -
@@ -871,10 +1259,10 @@ paths:
                         example: 20
                       to:
                         type: integer
-                        example: 2
+                        example: 13
                       total:
                         type: integer
-                        example: 2
+                        example: 13
                   code:
                     type: string
                     example: '1'
@@ -920,13 +1308,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 01hhskp82j73b819zd0bfm68nh
-                    title: JavaScript
+                    id: 01hhz3xwqhppm74pthff4w1gvb
+                    title: 'JavaScript, jQuery'
                     description: pokročilý
                     status: 1
-                    progress: 80
-                    created_at: '2023-12-16T15:25:03.000000Z'
-                    updated_at: '2023-12-16T15:25:03.000000Z'
+                    progress: 74
+                    created_at: '2023-12-18T18:45:03.000000Z'
+                    updated_at: '2023-12-18T21:06:05.000000Z'
                     deleted_at: null
                   code: '1'
                   errors: null
@@ -938,10 +1326,10 @@ paths:
                     properties:
                       id:
                         type: string
-                        example: 01hhskp82j73b819zd0bfm68nh
+                        example: 01hhz3xwqhppm74pthff4w1gvb
                       title:
                         type: string
-                        example: JavaScript
+                        example: 'JavaScript, jQuery'
                       description:
                         type: string
                         example: pokročilý
@@ -950,13 +1338,13 @@ paths:
                         example: 1
                       progress:
                         type: integer
-                        example: 80
+                        example: 74
                       created_at:
                         type: string
-                        example: '2023-12-16T15:25:03.000000Z'
+                        example: '2023-12-18T18:45:03.000000Z'
                       updated_at:
                         type: string
-                        example: '2023-12-16T15:25:03.000000Z'
+                        example: '2023-12-18T21:06:05.000000Z'
                       deleted_at:
                         type: string
                         example: null
@@ -980,7 +1368,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the skill.'
-        example: 01hhskp82j73b819zd0bfm68nh
+        example: 01hhz3xwqhppm74pthff4w1gvb
         required: true
         schema:
           type: string
@@ -1014,71 +1402,29 @@ paths:
                 example:
                   data:
                     -
-                      id: 01hhskp83f1r2169gyn0y793hg
                       title: 'Php Storm'
                       description: IDE
-                      status: 1
-                      priority: 1
-                      created_at: '2023-12-16T15:25:03.000000Z'
-                      updated_at: '2023-12-16T15:25:03.000000Z'
-                      deleted_at: null
                     -
-                      id: 01hhskp8eqzgpx29d6n5vhy7hr
                       title: 'Visual Studio Code'
                       description: Editor
-                      status: 1
-                      priority: 2
-                      created_at: '2023-12-16T15:25:04.000000Z'
-                      updated_at: '2023-12-16T15:25:04.000000Z'
-                      deleted_at: null
                     -
-                      id: 01hhskp8qy6ckmvby8b1mrnme0
-                      title: 'Git / GitHub'
-                      description: 'Verzovanie kódu'
-                      status: 1
-                      priority: 3
-                      created_at: '2023-12-16T15:25:04.000000Z'
-                      updated_at: '2023-12-16T15:25:04.000000Z'
-                      deleted_at: null
-                    -
-                      id: 01hhskp9pkvfed03et00wzhtdz
-                      title: 'Heidi SQL'
-                      description: 'Práca s DB'
-                      status: 1
-                      priority: 4
-                      created_at: '2023-12-16T15:25:05.000000Z'
-                      updated_at: '2023-12-16T15:25:05.000000Z'
-                      deleted_at: null
-                    -
-                      id: 01hhskpxnc5c3p81zzana0m908
                       title: 'MAMP / Laragon'
                       description: 'Pre prácu na localhoste'
-                      status: 1
-                      priority: 5
-                      created_at: '2023-12-16T15:25:26.000000Z'
-                      updated_at: '2023-12-16T15:25:26.000000Z'
-                      deleted_at: null
                     -
-                      id: 01hhskpy1teefab48enr48bg5n
                       title: 'Postman / Insomnia'
                       description: 'Pre testovanie API'
-                      status: 1
-                      priority: 6
-                      created_at: '2023-12-16T15:25:26.000000Z'
-                      updated_at: '2023-12-16T15:25:26.000000Z'
-                      deleted_at: null
                     -
-                      id: 01hhskpyb1h893aqvamkpwtvf6
+                      title: Cmder
+                      description: 'Pre prácu s konzolou / príkazový terminál'
+                    -
                       title: 'Chat GPT'
                       description: 'Užitočný pomocník pri písaní kódu'
-                      status: 1
-                      priority: 7
-                      created_at: '2023-12-16T15:25:26.000000Z'
-                      updated_at: '2023-12-16T15:25:26.000000Z'
-                      deleted_at: null
+                    -
+                      title: Photoshop
+                      description: 'Pre úpravu a tvorbu grafiky'
                   links:
-                    first: 'http://cv/api/v1/tool/index?page=1'
-                    last: 'http://cv/api/v1/tool/index?page=1'
+                    first: 'http://cv/api/v1/tool/index?per_page=20&page=1'
+                    last: 'http://cv/api/v1/tool/index?per_page=20&page=1'
                     prev: null
                     next: null
                   meta:
@@ -1091,7 +1437,7 @@ paths:
                         label: '&laquo; Predchádzajúca'
                         active: false
                       -
-                        url: 'http://cv/api/v1/tool/index?page=1'
+                        url: 'http://cv/api/v1/tool/index?per_page=20&page=1'
                         label: '1'
                         active: true
                       -
@@ -1111,104 +1457,44 @@ paths:
                     type: array
                     example:
                       -
-                        id: 01hhskp83f1r2169gyn0y793hg
                         title: 'Php Storm'
                         description: IDE
-                        status: 1
-                        priority: 1
-                        created_at: '2023-12-16T15:25:03.000000Z'
-                        updated_at: '2023-12-16T15:25:03.000000Z'
-                        deleted_at: null
                       -
-                        id: 01hhskp8eqzgpx29d6n5vhy7hr
                         title: 'Visual Studio Code'
                         description: Editor
-                        status: 1
-                        priority: 2
-                        created_at: '2023-12-16T15:25:04.000000Z'
-                        updated_at: '2023-12-16T15:25:04.000000Z'
-                        deleted_at: null
                       -
-                        id: 01hhskp8qy6ckmvby8b1mrnme0
-                        title: 'Git / GitHub'
-                        description: 'Verzovanie kódu'
-                        status: 1
-                        priority: 3
-                        created_at: '2023-12-16T15:25:04.000000Z'
-                        updated_at: '2023-12-16T15:25:04.000000Z'
-                        deleted_at: null
-                      -
-                        id: 01hhskp9pkvfed03et00wzhtdz
-                        title: 'Heidi SQL'
-                        description: 'Práca s DB'
-                        status: 1
-                        priority: 4
-                        created_at: '2023-12-16T15:25:05.000000Z'
-                        updated_at: '2023-12-16T15:25:05.000000Z'
-                        deleted_at: null
-                      -
-                        id: 01hhskpxnc5c3p81zzana0m908
                         title: 'MAMP / Laragon'
                         description: 'Pre prácu na localhoste'
-                        status: 1
-                        priority: 5
-                        created_at: '2023-12-16T15:25:26.000000Z'
-                        updated_at: '2023-12-16T15:25:26.000000Z'
-                        deleted_at: null
                       -
-                        id: 01hhskpy1teefab48enr48bg5n
                         title: 'Postman / Insomnia'
                         description: 'Pre testovanie API'
-                        status: 1
-                        priority: 6
-                        created_at: '2023-12-16T15:25:26.000000Z'
-                        updated_at: '2023-12-16T15:25:26.000000Z'
-                        deleted_at: null
                       -
-                        id: 01hhskpyb1h893aqvamkpwtvf6
+                        title: Cmder
+                        description: 'Pre prácu s konzolou / príkazový terminál'
+                      -
                         title: 'Chat GPT'
                         description: 'Užitočný pomocník pri písaní kódu'
-                        status: 1
-                        priority: 7
-                        created_at: '2023-12-16T15:25:26.000000Z'
-                        updated_at: '2023-12-16T15:25:26.000000Z'
-                        deleted_at: null
+                      -
+                        title: Photoshop
+                        description: 'Pre úpravu a tvorbu grafiky'
                     items:
                       type: object
                       properties:
-                        id:
-                          type: string
-                          example: 01hhskp83f1r2169gyn0y793hg
                         title:
                           type: string
                           example: 'Php Storm'
                         description:
                           type: string
                           example: IDE
-                        status:
-                          type: integer
-                          example: 1
-                        priority:
-                          type: integer
-                          example: 1
-                        created_at:
-                          type: string
-                          example: '2023-12-16T15:25:03.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2023-12-16T15:25:03.000000Z'
-                        deleted_at:
-                          type: string
-                          example: null
                   links:
                     type: object
                     properties:
                       first:
                         type: string
-                        example: 'http://cv/api/v1/tool/index?page=1'
+                        example: 'http://cv/api/v1/tool/index?per_page=20&page=1'
                       last:
                         type: string
-                        example: 'http://cv/api/v1/tool/index?page=1'
+                        example: 'http://cv/api/v1/tool/index?per_page=20&page=1'
                       prev:
                         type: string
                         example: null
@@ -1235,7 +1521,7 @@ paths:
                             label: '&laquo; Predchádzajúca'
                             active: false
                           -
-                            url: 'http://cv/api/v1/tool/index?page=1'
+                            url: 'http://cv/api/v1/tool/index?per_page=20&page=1'
                             label: '1'
                             active: true
                           -
@@ -1311,13 +1597,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 01hhskp83f1r2169gyn0y793hg
+                    id: 01hhz3xwrwrbpsrd3fxebzn2by
                     title: 'Php Storm'
                     description: IDE
                     status: 1
                     priority: 1
-                    created_at: '2023-12-16T15:25:03.000000Z'
-                    updated_at: '2023-12-16T15:25:03.000000Z'
+                    created_at: '2023-12-18T18:45:03.000000Z'
+                    updated_at: '2023-12-18T21:21:16.000000Z'
                     deleted_at: null
                   code: '1'
                   errors: null
@@ -1329,7 +1615,7 @@ paths:
                     properties:
                       id:
                         type: string
-                        example: 01hhskp83f1r2169gyn0y793hg
+                        example: 01hhz3xwrwrbpsrd3fxebzn2by
                       title:
                         type: string
                         example: 'Php Storm'
@@ -1344,10 +1630,10 @@ paths:
                         example: 1
                       created_at:
                         type: string
-                        example: '2023-12-16T15:25:03.000000Z'
+                        example: '2023-12-18T18:45:03.000000Z'
                       updated_at:
                         type: string
-                        example: '2023-12-16T15:25:03.000000Z'
+                        example: '2023-12-18T21:21:16.000000Z'
                       deleted_at:
                         type: string
                         example: null
@@ -1371,7 +1657,7 @@ paths:
         in: path
         name: slug
         description: 'The slug of the tool.'
-        example: 01hhskp83f1r2169gyn0y793hg
+        example: 01hhz3xwrwrbpsrd3fxebzn2by
         required: true
         schema:
           type: string
@@ -1398,6 +1684,9 @@ tags:
     description: ''
   -
     name: Profil
+    description: ''
+  -
+    name: Setting
     description: ''
   -
     name: Skill
