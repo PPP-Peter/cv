@@ -430,7 +430,6 @@
     "Previewing": "Náhľad",
     "Replicate": "Replikovať",
     "Are you sure you want to log out?": "Chcete sa odhlásiť?",
-    "There are no new notifications.": "Žiadne notifikácie",
     "Resource Row Dropdown": "Rozbaľovacia ponuka položiek",
     "This copy of Nova is unlicensed.": "Táto kópia Nova je bez licencie.",
     "Impersonate": "Prihlásenie pod inou identitou",
@@ -444,7 +443,7 @@
     "Select this page": "Vybrať túto stránku",
     "The action was executed successfully.": "Akcia bola úspešne vykonaná.",
     "There was a problem fetching the resource.": "Pri načítavaní položky sa vyskytol problém.",
-    "There are no new notifications.": "Neexistujú žiadne nové upozornenia.",
+    "There are no new notifications.": "Žiadne nové upozornenia.",
     "Light": "Svetlá",
     "Dark": "Tmavá",
     "System": "Systém",
@@ -452,7 +451,6 @@
     "To": "Do",
     "There are no fields to display.": "Neexistujú žiadne polia na zobrazenie.",
     "Notifications": "Upozornenia",
-    "Mark all as Read": "Označiť všetky ako prečítané",
     "Copy to clipboard": "Skopírovať do schránky",
     "Are you sure you want to delete this notification?": "Naozaj chcete odstrániť toto upozornenie??",
     "Drop files or click to choose": "Presuňte súbory alebo ich vyberte kliknutím",
@@ -470,6 +468,10 @@
     "Guard Name": "Meno strážcu",
     "Role": "Rola",
     "Add New Media": "Pridaj obrázok",
+    "Mark Read": "Prečítané",
+    "Mark Unread": "Označiť ako neprečítané",
+    "Mark all as Read": "Označiť všetky ako prečítané",
+    "Delete all notifications": "Vymazať všetky notifikácie",
     "Verify your email address": "Overenie emailovej adresy"
 
 }

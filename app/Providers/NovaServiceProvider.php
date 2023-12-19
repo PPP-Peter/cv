@@ -29,7 +29,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         MainMenu::make();
         Footer::make();
         Nova::style('app', resource_path('css/app.css'));
-        Nova::withoutNotificationCenter();
+        // Nova::withoutNotificationCenter();
 
         Nova::script('admin', resource_path('js/admin.js'));
         // Nova::withoutThemeSwitcher(); // this method disables the theme switcher
