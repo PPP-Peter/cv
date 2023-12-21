@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -9,6 +9,10 @@ class Skill extends BaseModel
 {
     use SoftDeletes;
     use HasUlids;
+
+    const STATUS_DRAFT = 0;
+    const STATUS_SHOW = 1;
+
 
     protected $guarded = ['id'];
 

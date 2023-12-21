@@ -71,7 +71,10 @@ class Skill extends BaseResource
                         ->displayUsing(fn ($progress) => "$progress%"), // change display text: 25%
 
                     Select::make('Status', 'status')
-                        ->options([0 => 'Draft', 1 => 'Show',])
+                        ->options([
+                            \App\Models\Skill::STATUS_DRAFT => 'Draft',
+                            \App\Models\Skill::STATUS_SHOW => 'Show'
+                        ])
                         ->displayUsingLabels()->hideFromIndex()->hideFromDetail(),
 
                     IndexToggle::make(__('fields.status'), 'status')->flash('aktualizovaný')

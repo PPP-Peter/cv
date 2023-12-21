@@ -17,15 +17,15 @@ class UserSeeder extends Seeder
     {
         //super admin
         $super_admin = $this->getUpdateOrCreate('user@user.sk', 'Super-admin',  Hash::make('testuser'), ['id' => '01gzbb5nnjyb7k0tn659e1v1k1'] )
-            ->syncRoles('super-admin');
+            ->syncRoles(['super-admin', 'admin', 'manager', 'user']);
 
         // admin
         $super_admin = $this->getUpdateOrCreate('test1@user.sk', 'Admin',  Hash::make('testuser'), ['id' => '01gzbb5nnjyb7k0tn659e1v1kq'] )
-            ->syncRoles('admin');
+            ->syncRoles(['admin', 'manager', 'user']);
 
         // manager
         $manager = $this->getUpdateOrCreate('test2@user.sk', 'Manažér',  Hash::make('testuser'),  null)
-            ->assignRole('manager');
+            ->assignRole('manager', 'user');
 
         //user
         $testuser = $this->getUpdateOrCreate('testuser@user.sk', 'Test User',  Hash::make('testuser'), null )

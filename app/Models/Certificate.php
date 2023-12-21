@@ -13,6 +13,10 @@ class Certificate extends BaseModel implements HasMedia
     use HasUlids;
     use InteractsWithMedia;
 
+    const STATUS_DRAFT = 0;
+    const STATUS_SHOW = 1;
+    const STATUS_DENIED = 2;
+
     protected $guarded = ['id'];
 
     protected $casts = [

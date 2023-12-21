@@ -79,9 +79,9 @@ class Tool extends BaseResource
                     Number::make(__('fields.priority'), 'priority')->sortable(),
 
                     Select::make('Status', 'status')->options([
-                        0 => 'Draft',
-                        1 => 'Show',
-                        2 => 'Denied',
+                        \App\Models\Tool::STATUS_DRAFT => 'Draft',
+                        \App\Models\Tool::STATUS_SHOW => 'Show',
+                        \App\Models\Tool::STATUS_DENIED => 'Denied',
                     ])->displayUsingLabels()->hideFromIndex(),
 
                     Badge::make('Status')->map([
