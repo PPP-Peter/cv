@@ -32,22 +32,22 @@
         </a>
         <a :href="'/api/v1/skill/index'" target="_blank">
             <p class="json text-center text-gray-500 font-bold">skills:
-                <span>{{this.link() + '/api/v1/skill/index' }}</span>
+                <span class="font-medium">{{this.link() + '/api/v1/skill/index' }}</span>
             </p>
         </a>
         <a :href="'/api/v1/job/index'" target="_blank">
             <p class="json text-center text-gray-500 font-bold">jobs:
-                <span>{{this.link() + '/api/v1/job/index' }}</span>
+                <span class="font-medium">{{this.link() + '/api/v1/job/index' }}</span>
             </p>
         </a>
         <a :href="'/api/v1/tool/index'" target="_blank">
             <p class="json text-center text-gray-500 font-bold">tools:
-                <span>{{this.link() + '/api/v1/tool/index' }}</span>
+                <span class="font-medium">{{this.link() + '/api/v1/tool/index' }}</span>
             </p>
         </a>
         <a :href="'/docs'" target="_blank">
             <p class="json text-center text-gray-500 font-bold">documentation:
-                <span>{{ this.link() + '/docs' }}</span>
+                <span class="font-medium">{{ this.link() + '/docs' }}</span>
             </p>
         </a>
 

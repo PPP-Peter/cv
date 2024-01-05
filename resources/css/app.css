@@ -9,3 +9,7 @@
 .htmlCard__content {
     overflow:hidden;
 }
+
+header a.text-red-500{
+    display: none !important;
+}

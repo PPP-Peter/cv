@@ -31,11 +31,14 @@ class MainMenu
 
                 MenuSection::resource('\App\Nova\Certificate')->icon('clipboard-list'),
 
+                MenuSection::resource('\App\Nova\User')->icon('users')
+                    ->canSee(fn ($request) => $request->user()->isAnyAdmin()),
+
                 MenuSection::make(__('fields.menu.roles'), [
                     MenuItem::resource('\Sereny\NovaPermissions\Nova\Permission'),
                     MenuItem::resource('\Sereny\NovaPermissions\Nova\Role'),
-                ])->collapsable()->collapsible()->icon('shield-check'),
-                //->canSee(fn ($request) => $request->user()->isAnyAdmin())
+                ])->collapsable()->collapsible()->icon('shield-check')
+                ->canSee(fn ($request) => $request->user()->isAnyAdmin()),
 
                 MenuSection::make(__('fields.menu.settings'), [
                     $menu->items[3]->items[0] ,

@@ -51,5 +51,6 @@ return [
     "menu.tools" => "Nástroje",
     "menu.jobs" => "Pozície",
     "menu.roles" => "Roly a povolenia",
-    "menu.settings" => "Nastavenia"
+    "menu.settings" => "Nastavenia",
+    "menu.users" => "Užívatelia"
 ];

@@ -3,6 +3,8 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Eminiarts\Tabs\Tab;
+use Eminiarts\Tabs\Tabs;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
@@ -10,7 +12,7 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class User extends Resource
+class User extends BaseResource
 {
     /**
      * The model the resource corresponds to.
@@ -44,6 +46,8 @@ class User extends Resource
     public function fields(NovaRequest $request)
     {
         return [
+            Tabs::make(__('user.detail', ['title' => $this->title]), [
+                Tab::make(__('user.singular'), [
             ID::make()->onlyOnForms()->sortable(),
 
 //            Gravatar::make()->maxWidth(50),
@@ -62,6 +66,8 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', Rules\Password::defaults())
                 ->updateRules('nullable', Rules\Password::defaults()),
+                ]),
+            ])->withToolbar(),
         ];
     }
 
